@@ -1,0 +1,29 @@
+{
+  "source": "OEDI PVDAQ 2023 Solar Data Prize, System 9068",
+  "system_id": 9068,
+  "object_name": "9068_ac_power_data_20240101_20250430.csv",
+  "source_url": "https://oedi-data-lake.s3.amazonaws.com/pvdaq/2023-solar-data-prize/9068_OEDI/data/9068_ac_power_data_20240101_20250430.csv",
+  "retrieved_utc": "2026-11-08T08:55:11.303447+00:00",
+  "http_status": 200,
+  "remote_content_length_bytes": 10870311,
+  "local_file_size_bytes": 10870311,
+  "last_modified": "Fri, 27 Jun 2025 21:04:43 GMT",
+  "etag": "\"f1f95b822d098d098ca6533c343ff304-2\"",
+  "sha256": "16cac9d3ec61027e6f176eea276dafd1ad6d46461336edb29a3772ad34b5efc2",
+  "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "dataset_doi": "https://doi.org/10.25984/1846021",
+  "attribution": "Deline, C., Perry, K., Deceglie, M., Muller, M., Sekulic, W., & Jordan, D. (2021). Photovoltaic Data Acquisition (PVDAQ) Public Datasets. Open Energy Data Initiative (OEDI), NREL. https://doi.org/10.25984/1846021",
+  "authorization": "User-approved single additional source object for Phase C1.6.",
+  "channels_used_for_pilot": [
+    "inverter_1_ac_power_(kw)_inv_150143",
+    "inverter_2_ac_power_(kw)_inv_150144"
+  ],
+  "metadata_references": {
+    "system_metadata": "https://oedi-data-lake.s3.amazonaws.com/pvdaq/2023-solar-data-prize/9068_OEDI/metadata/9068_system_metadata.json",
+    "oedi_schema": "https://github.com/openEDI/documentation/blob/main/pvdaq.md",
+    "2025_increment_change_log": "https://oedi-data-lake.s3.amazonaws.com/pvdaq/2023-solar-data-prize/change_log_2023_Solar_Data_Prize_20250627.pdf"
+  },
+  "derived_pilot": "C:\\Users\\hp\\OneDrive\\Desktop\\solar-power-project\\ml\\data\\processed\\pvdaq\\9068\\pilot_2025-04_inverter_validation\\pvdaq_9068_pilot_2025-04_inverter_ac.csv",
+  "derived_pilot_scope": "Source observations with measured_on in [2025-04-01, 2025-05-01); original source object unchanged."
+}

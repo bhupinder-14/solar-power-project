@@ -1,0 +1,12 @@
+object,sample_type,year,valid_samples,first_issue_interval_label,last_issue_interval_label
+legacy,target-only 24h lookback,2017,30485,2017-08-26T19:50:00,2017-12-31T23:55:00
+legacy,target-only 24h lookback,2018,100122,2018-01-01T00:00:00,2018-12-31T23:55:00
+legacy,target-only 24h lookback,2019,99069,2019-01-01T00:00:00,2019-12-31T23:55:00
+legacy,target-only 24h lookback,2020,71731,2020-01-01T00:00:00,2020-12-31T23:55:00
+legacy,target-only 24h lookback,2021,69549,2021-01-01T00:00:00,2021-12-31T23:55:00
+legacy,target-only 24h lookback,2022,94052,2022-01-01T00:00:00,2022-12-31T23:55:00
+legacy,target-only 24h lookback,2023,72490,2023-01-01T00:00:00,2023-11-16T12:25:00
+increment,target-only 24h lookback,2024,93925,2024-01-02T00:00:00,2024-12-31T23:55:00
+increment,target-only 24h lookback,2025,31101,2025-01-01T00:00:00,2025-04-30T14:00:00
+increment,candidate POA-pad2 weather informed 24h lookback,2024,93632,2024-01-02T00:00:00,2024-12-31T23:55:00
+increment,candidate POA-pad2 weather informed 24h lookback,2025,31101,2025-01-01T00:00:00,2025-04-30T14:00:00

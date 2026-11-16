@@ -1,0 +1,702 @@
+{
+  "audit_scope": "April 1 through April 30, 2025 inclusive; source files retained unchanged.",
+  "system_id": 9068,
+  "window_start_inclusive": "2025-04-01T00:00:00",
+  "window_stop_exclusive": "2025-05-01T00:00:00",
+  "nominal_cadence": "5 minutes per system metadata; verified separately against observed timestamps below.",
+  "retrieval_date_utc": "2026-11-08",
+  "source_base_url": "https://oedi-data-lake.s3.amazonaws.com/pvdaq/2023-solar-data-prize/9068_OEDI/data/",
+  "dataset_license": "CC BY 4.0",
+  "dataset_license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "dataset_doi": "https://doi.org/10.25984/1846021",
+  "attribution": "Deline, C., Perry, K., Deceglie, M., Muller, M., Sekulic, W., & Jordan, D. (2021). Photovoltaic Data Acquisition (PVDAQ) Public Datasets. Open Energy Data Initiative (OEDI), NREL. https://doi.org/10.25984/1846021",
+  "source_object_validation": {
+    "meter": {
+      "file": "9068_meter_data_20240101_20250430.csv",
+      "file_size_bytes": 14933441,
+      "sha256": "be6662913e7ceb0888b24e6ad16c2b76eba264e2c7c0ba69d36d6e85772157b6",
+      "columns_in_source": 15,
+      "selected_columns_present": [
+        "meter_ac_power_(kw)_meter_150150"
+      ],
+      "metadata_channels_absent_from_this_object": [],
+      "rows_in_april_window_before_duplicate_handling": 8525,
+      "duplicate_analysis": {
+        "duplicate_timestamp_groups": 0,
+        "duplicate_excess_rows": 0,
+        "conflicting_timestamp_groups": 0,
+        "exact_duplicate_excess_rows": 0
+      },
+      "source_rows_scanned_only_to_select_april": 123872,
+      "invalid_timestamp_rows_encountered_while_scanning_full_source_for_window_extraction": 0
+    },
+    "irradiance": {
+      "file": "9068_irradiance_data_20240101_20250430.csv",
+      "file_size_bytes": 6720619,
+      "sha256": "f3817d240ec0f6c567cde5055a07009f8b64ba16186aed25b316bdc0b2a161ae",
+      "columns_in_source": 5,
+      "selected_columns_present": [
+        "pyranometer_(class_a)_pad_1_poa_irradiance_(w/m2)_o_149723",
+        "pyranometer_(class_a)_pad_1_poa_irradiance_temp_compensated_(w/m2)_o_149724",
+        "pyranometer_(class_a)_pad_2_poa_irradiance_(w/m2)_o_149725",
+        "pyranometer_(class_a)_pad_2_poa_irradiance_temp_compensated_(w/m2)_o_149726"
+      ],
+      "metadata_channels_absent_from_this_object": [],
+      "rows_in_april_window_before_duplicate_handling": 8524,
+      "duplicate_analysis": {
+        "duplicate_timestamp_groups": 0,
+        "duplicate_excess_rows": 0,
+        "conflicting_timestamp_groups": 0,
+        "exact_duplicate_excess_rows": 0
+      },
+      "source_rows_scanned_only_to_select_april": 137243,
+      "invalid_timestamp_rows_encountered_while_scanning_full_source_for_window_extraction": 0
+    },
+    "environment": {
+      "file": "9068_environment_data_20240101_20250430.csv",
+      "file_size_bytes": 66012711,
+      "sha256": "c8dbc9711b59e2847cdc158989f5a7fcdf93395a18cbd88dddd2ccbde579d867",
+      "columns_in_source": 94,
+      "selected_columns_present": [
+        "weather_station_ambient_temperature_(c)_o_149727",
+        "thermocouple_pad_1_back-of-module_temperature_1_(c)_o_149728",
+        "thermocouple_pad_1_back-of-module_temperature_2_(c)_o_149729",
+        "thermocouple_pad_2_back-of-module_temperature_1_(c)_o_149730",
+        "thermocouple_pad_2_back-of-module_temperature_2_(c)_o_149731"
+      ],
+      "metadata_channels_absent_from_this_object": [
+        "wind_sensor_max_wind_speed_(m/s)_o_149732",
+        "wind_sensor_wind_direction_o_149733",
+        "wind_sensor_wind_direction_compass_corr_o_149734",
+        "wind_sensor_wind_direction_fast_o_149735",
+        "wind_sensor_wind_speed_(m/s)_o_149736",
+        "wind_sensor_wind_speed_fast_(m/s)_o_149737",
+        "wind_sensor_wind_speed_std._dev._(m/s)_o_149738"
+      ],
+      "rows_in_april_window_before_duplicate_handling": 8525,
+      "duplicate_analysis": {
+        "duplicate_timestamp_groups": 0,
+        "duplicate_excess_rows": 0,
+        "conflicting_timestamp_groups": 0,
+        "exact_duplicate_excess_rows": 0
+      },
+      "source_rows_scanned_only_to_select_april": 137249,
+      "invalid_timestamp_rows_encountered_while_scanning_full_source_for_window_extraction": 0
+    }
+  },
+  "source_metadata_channels_absent_from_objects": {
+    "meter": [],
+    "irradiance": [],
+    "environment": [
+      "wind_sensor_max_wind_speed_(m/s)_o_149732",
+      "wind_sensor_wind_direction_o_149733",
+      "wind_sensor_wind_direction_compass_corr_o_149734",
+      "wind_sensor_wind_direction_fast_o_149735",
+      "wind_sensor_wind_speed_(m/s)_o_149736",
+      "wind_sensor_wind_speed_fast_(m/s)_o_149737",
+      "wind_sensor_wind_speed_std._dev._(m/s)_o_149738"
+    ]
+  },
+  "pilot_rows_written_including_missing_grid_rows_and_off_grid_records": 8640,
+  "pilot_timestamp_range": {
+    "first": "2025-04-01T00:00:00",
+    "last": "2025-04-30T23:55:00",
+    "all_source_timestamps_timezone_aware": false,
+    "timezone_interpretation": "Preserved as recorded; no localization or UTC assumption was applied."
+  },
+  "expected_five_minute_slots": 8640,
+  "missing_expected_timestamps": 0,
+  "missing_expected_timestamp_examples": [],
+  "timestamp_quality_by_source_group": {
+    "meter": {
+      "unique_timestamps": 8525,
+      "observed_start": "2025-04-01T00:00:00",
+      "observed_end": "2025-04-30T14:20:00",
+      "expected_intervals_in_window": 8640,
+      "missing_expected_intervals": 115,
+      "missing_expected_interval_fraction": 0.013310185185185185,
+      "off_grid_timestamps": 0,
+      "non_five_minute_adjacent_differences": 0,
+      "adjacent_difference_counts_minutes": {
+        "5": 8524
+      }
+    },
+    "irradiance": {
+      "unique_timestamps": 8524,
+      "observed_start": "2025-04-01T00:00:00",
+      "observed_end": "2025-04-30T14:15:00",
+      "expected_intervals_in_window": 8640,
+      "missing_expected_intervals": 116,
+      "missing_expected_interval_fraction": 0.013425925925925926,
+      "off_grid_timestamps": 0,
+      "non_five_minute_adjacent_differences": 0,
+      "adjacent_difference_counts_minutes": {
+        "5": 8523
+      }
+    },
+    "environment": {
+      "unique_timestamps": 8525,
+      "observed_start": "2025-04-01T00:00:00",
+      "observed_end": "2025-04-30T14:20:00",
+      "expected_intervals_in_window": 8640,
+      "missing_expected_intervals": 115,
+      "missing_expected_interval_fraction": 0.013310185185185185,
+      "off_grid_timestamps": 0,
+      "non_five_minute_adjacent_differences": 0,
+      "adjacent_difference_counts_minutes": {
+        "5": 8524
+      }
+    }
+  },
+  "all_channel_union_timestamp_quality": {
+    "unique_timestamps": 8640,
+    "observed_start": "2025-04-01T00:00:00",
+    "observed_end": "2025-04-30T23:55:00",
+    "expected_intervals_in_window": 8640,
+    "missing_expected_intervals": 0,
+    "missing_expected_interval_fraction": 0.0,
+    "off_grid_timestamps": 0,
+    "non_five_minute_adjacent_differences": 0,
+    "adjacent_difference_counts_minutes": {
+      "5": 8639
+    }
+  },
+  "target_channel": {
+    "identifier": "meter_ac_power_(kw)_meter_150150",
+    "units": "kW",
+    "aggregation": "avg",
+    "meter_time_interval_alignment": "L (left-aligned), per system metadata",
+    "rows_with_numeric_target_in_pilot": 8525,
+    "unique_target_source_timestamps": 8525,
+    "target_rows_on_expected_five_minute_grid": 8525,
+    "missing_expected_target_timestamps": 115,
+    "blank_or_nonnumeric_target_rows_at_observed_timestamps": 0,
+    "nonnumeric_nonblank_target_rows": 0,
+    "missing_target_fraction_of_expected_grid": 0.013310185185185185,
+    "target_distribution_on_grid": {
+      "minimum_kw": -25.0,
+      "p01_kw": -14.0,
+      "median_kw": 71.0,
+      "mean_kw": 1109.7139002932552,
+      "p99_kw": 3416.76,
+      "maximum_kw": 3479.0,
+      "negative_readings_flagged_not_removed": 4074,
+      "above_4011_kw_flagged_not_removed": 0,
+      "engineering_flag_threshold_kw": 4011,
+      "threshold_basis": "5% above two metadata-listed 1,910 kW AC inverter capacities; flag only, not a deletion rule."
+    }
+  },
+  "weather_and_sensor_channels": {
+    "meter_ac_power_(kw)_meter_150150": {
+      "observed_values": 8525,
+      "missing_values_on_observed_union_timeline": 115,
+      "missing_fraction_of_observed_union_timeline": 0.013310185185185185,
+      "non_numeric_nonblank_values": 0,
+      "minimum": -25.0,
+      "p01": -14.0,
+      "median": 71.0,
+      "mean": 1109.7139002932552,
+      "p99": 3416.76,
+      "maximum": 3479.0,
+      "standard_deviation": 1396.377425939607,
+      "negative_values": 4074,
+      "longest_consecutive_same_value_intervals": 153,
+      "longest_constant_duration_minutes": 760,
+      "longest_constant_value": -13.0,
+      "longest_constant_run_start": "2025-04-03T18:40:00",
+      "longest_constant_run_end": "2025-04-04T07:20:00",
+      "constant_run_at_least_60_minutes": true
+    },
+    "pyranometer_(class_a)_pad_1_poa_irradiance_(w/m2)_o_149723": {
+      "observed_values": 8521,
+      "missing_values_on_observed_union_timeline": 119,
+      "missing_fraction_of_observed_union_timeline": 0.013773148148148149,
+      "non_numeric_nonblank_values": 0,
+      "minimum": -3.23,
+      "p01": -2.46,
+      "median": 31.9,
+      "mean": 305.96523412744983,
+      "p99": 1076.63,
+      "maximum": 1299.63,
+      "standard_deviation": 389.89827542577706,
+      "negative_values": 3736,
+      "longest_consecutive_same_value_intervals": 37,
+      "longest_constant_duration_minutes": 180,
+      "longest_constant_value": 659.2,
+      "longest_constant_run_start": "2025-04-27T15:30:00",
+      "longest_constant_run_end": "2025-04-27T18:30:00",
+      "constant_run_at_least_60_minutes": true
+    },
+    "pyranometer_(class_a)_pad_1_poa_irradiance_temp_compensated_(w/m2)_o_149724": {
+      "observed_values": 8521,
+      "missing_values_on_observed_union_timeline": 119,
+      "missing_fraction_of_observed_union_timeline": 0.013773148148148149,
+      "non_numeric_nonblank_values": 0,
+      "minimum": -3.23,
+      "p01": -2.47,
+      "median": 32.03,
+      "mean": 306.3631510386105,
+      "p99": 1078.5819999999999,
+      "maximum": 1306.29,
+      "standard_deviation": 390.2355387244122,
+      "negative_values": 3736,
+      "longest_consecutive_same_value_intervals": 37,
+      "longest_constant_duration_minutes": 180,
+      "longest_constant_value": 661.46,
+      "longest_constant_run_start": "2025-04-27T15:30:00",
+      "longest_constant_run_end": "2025-04-27T18:30:00",
+      "constant_run_at_least_60_minutes": true
+    },
+    "pyranometer_(class_a)_pad_2_poa_irradiance_(w/m2)_o_149725": {
+      "observed_values": 8524,
+      "missing_values_on_observed_union_timeline": 116,
+      "missing_fraction_of_observed_union_timeline": 0.013425925925925926,
+      "non_numeric_nonblank_values": 0,
+      "minimum": -3.37,
+      "p01": -2.55,
+      "median": 35.685,
+      "mean": 318.42023228531207,
+      "p99": 1098.8113000000008,
+      "maximum": 1312.91,
+      "standard_deviation": 406.7505064175752,
+      "negative_values": 3733,
+      "longest_consecutive_same_value_intervals": 4,
+      "longest_constant_duration_minutes": 15,
+      "longest_constant_value": -0.87,
+      "longest_constant_run_start": "2025-04-04T03:15:00",
+      "longest_constant_run_end": "2025-04-04T03:30:00",
+      "constant_run_at_least_60_minutes": false
+    },
+    "pyranometer_(class_a)_pad_2_poa_irradiance_temp_compensated_(w/m2)_o_149726": {
+      "observed_values": 8524,
+      "missing_values_on_observed_union_timeline": 116,
+      "missing_fraction_of_observed_union_timeline": 0.013425925925925926,
+      "non_numeric_nonblank_values": 0,
+      "minimum": -3.38,
+      "p01": -2.5577,
+      "median": 35.785,
+      "mean": 318.69141130924453,
+      "p99": 1099.5254,
+      "maximum": 1315.47,
+      "standard_deviation": 406.99656390560085,
+      "negative_values": 3733,
+      "longest_consecutive_same_value_intervals": 3,
+      "longest_constant_duration_minutes": 10,
+      "longest_constant_value": -0.75,
+      "longest_constant_run_start": "2025-04-04T00:35:00",
+      "longest_constant_run_end": "2025-04-04T00:45:00",
+      "constant_run_at_least_60_minutes": false
+    },
+    "weather_station_ambient_temperature_(c)_o_149727": {
+      "observed_values": 8524,
+      "missing_values_on_observed_union_timeline": 116,
+      "missing_fraction_of_observed_union_timeline": 0.013425925925925926,
+      "non_numeric_nonblank_values": 0,
+      "minimum": -5.6,
+      "p01": -4.2,
+      "median": 8.199999999999998,
+      "mean": 9.261637728765837,
+      "p99": 28.3,
+      "maximum": 30.8,
+      "standard_deviation": 7.8793540975538585,
+      "negative_values": 902,
+      "longest_consecutive_same_value_intervals": 26,
+      "longest_constant_duration_minutes": 125,
+      "longest_constant_value": 0.9,
+      "longest_constant_run_start": "2025-04-04T01:20:00",
+      "longest_constant_run_end": "2025-04-04T03:25:00",
+      "constant_run_at_least_60_minutes": true
+    },
+    "thermocouple_pad_1_back-of-module_temperature_1_(c)_o_149728": {
+      "observed_values": 8521,
+      "missing_values_on_observed_union_timeline": 119,
+      "missing_fraction_of_observed_union_timeline": 0.013773148148148149,
+      "non_numeric_nonblank_values": 0,
+      "minimum": -10.8,
+      "p01": -8.099999999999998,
+      "median": 9.2,
+      "mean": 15.757117709189062,
+      "p99": 51.7,
+      "maximum": 56.8,
+      "standard_deviation": 17.1409014135456,
+      "negative_values": 1704,
+      "longest_consecutive_same_value_intervals": 24,
+      "longest_constant_duration_minutes": 115,
+      "longest_constant_value": 5.7,
+      "longest_constant_run_start": "2025-04-26T00:05:00",
+      "longest_constant_run_end": "2025-04-26T02:00:00",
+      "constant_run_at_least_60_minutes": true
+    },
+    "thermocouple_pad_1_back-of-module_temperature_2_(c)_o_149729": {
+      "observed_values": 8521,
+      "missing_values_on_observed_union_timeline": 119,
+      "missing_fraction_of_observed_union_timeline": 0.013773148148148149,
+      "non_numeric_nonblank_values": 0,
+      "minimum": -11.0,
+      "p01": -8.099999999999998,
+      "median": 9.4,
+      "mean": 16.001314399718343,
+      "p99": 52.6,
+      "maximum": 57.4,
+      "standard_deviation": 17.366748506016076,
+      "negative_values": 1704,
+      "longest_consecutive_same_value_intervals": 19,
+      "longest_constant_duration_minutes": 90,
+      "longest_constant_value": 1.8,
+      "longest_constant_run_start": "2025-04-14T04:15:00",
+      "longest_constant_run_end": "2025-04-14T05:45:00",
+      "constant_run_at_least_60_minutes": true
+    },
+    "thermocouple_pad_2_back-of-module_temperature_1_(c)_o_149730": {
+      "observed_values": 8524,
+      "missing_values_on_observed_union_timeline": 116,
+      "missing_fraction_of_observed_union_timeline": 0.013425925925925926,
+      "non_numeric_nonblank_values": 0,
+      "minimum": 3276.7,
+      "p01": 3276.7,
+      "median": 3276.7,
+      "mean": 3276.6999999999994,
+      "p99": 3276.7,
+      "maximum": 3276.7,
+      "standard_deviation": 4.547740277615574e-13,
+      "negative_values": 0,
+      "longest_consecutive_same_value_intervals": 8524,
+      "longest_constant_duration_minutes": 42615,
+      "longest_constant_value": 3276.7,
+      "longest_constant_run_start": "2025-04-01T00:00:00",
+      "longest_constant_run_end": "2025-04-30T14:15:00",
+      "constant_run_at_least_60_minutes": true
+    },
+    "thermocouple_pad_2_back-of-module_temperature_2_(c)_o_149731": {
+      "observed_values": 8524,
+      "missing_values_on_observed_union_timeline": 116,
+      "missing_fraction_of_observed_union_timeline": 0.013425925925925926,
+      "non_numeric_nonblank_values": 0,
+      "minimum": -11.2,
+      "p01": -8.576999999999998,
+      "median": 9.1,
+      "mean": 15.872782731112155,
+      "p99": 51.6,
+      "maximum": 56.9,
+      "standard_deviation": 17.471938533353864,
+      "negative_values": 1706,
+      "longest_consecutive_same_value_intervals": 25,
+      "longest_constant_duration_minutes": 120,
+      "longest_constant_value": 5.5,
+      "longest_constant_run_start": "2025-04-26T00:05:00",
+      "longest_constant_run_end": "2025-04-26T02:05:00",
+      "constant_run_at_least_60_minutes": true
+    }
+  },
+  "measurement_parse_failures": {
+    "non_numeric_nonblank_by_channel": {
+      "meter_ac_power_(kw)_meter_150150": 0,
+      "pyranometer_(class_a)_pad_1_poa_irradiance_(w/m2)_o_149723": 0,
+      "pyranometer_(class_a)_pad_1_poa_irradiance_temp_compensated_(w/m2)_o_149724": 0,
+      "pyranometer_(class_a)_pad_2_poa_irradiance_(w/m2)_o_149725": 0,
+      "pyranometer_(class_a)_pad_2_poa_irradiance_temp_compensated_(w/m2)_o_149726": 0,
+      "weather_station_ambient_temperature_(c)_o_149727": 0,
+      "thermocouple_pad_1_back-of-module_temperature_1_(c)_o_149728": 0,
+      "thermocouple_pad_1_back-of-module_temperature_2_(c)_o_149729": 0,
+      "thermocouple_pad_2_back-of-module_temperature_1_(c)_o_149730": 0,
+      "thermocouple_pad_2_back-of-module_temperature_2_(c)_o_149731": 0
+    },
+    "evidence_file": null
+  },
+  "quality_flags_not_applied_as_filters": {
+    "meter_ac_power_(kw)_meter_150150": [
+      {
+        "flag": "negative_revenue_meter_power",
+        "count": 4074,
+        "interpretation": "Preserved; may represent bidirectional/net meter flow or auxiliary consumption, and must be confirmed before treating as gross PV generation."
+      },
+      {
+        "flag": "constant_reading_run_at_least_60_minutes",
+        "longest_consecutive_same_value_intervals": 153,
+        "longest_constant_duration_minutes": 760,
+        "longest_constant_value": -13.0,
+        "longest_constant_run_start": "2025-04-03T18:40:00",
+        "longest_constant_run_end": "2025-04-04T07:20:00",
+        "constant_run_at_least_60_minutes": true,
+        "interpretation": "Flag for stale-sensor review; a stable signal alone is not proof of sensor failure."
+      }
+    ],
+    "pyranometer_(class_a)_pad_1_poa_irradiance_(w/m2)_o_149723": [
+      {
+        "flag": "negative_irradiance_zero_offset_candidate",
+        "count": 3736,
+        "interpretation": "Small negative values are retained as recorded; likely require dark-offset/measurement review."
+      },
+      {
+        "flag": "constant_reading_run_at_least_60_minutes",
+        "longest_consecutive_same_value_intervals": 37,
+        "longest_constant_duration_minutes": 180,
+        "longest_constant_value": 659.2,
+        "longest_constant_run_start": "2025-04-27T15:30:00",
+        "longest_constant_run_end": "2025-04-27T18:30:00",
+        "constant_run_at_least_60_minutes": true,
+        "interpretation": "Flag for stale-sensor review; a stable signal alone is not proof of sensor failure."
+      }
+    ],
+    "pyranometer_(class_a)_pad_1_poa_irradiance_temp_compensated_(w/m2)_o_149724": [
+      {
+        "flag": "negative_irradiance_zero_offset_candidate",
+        "count": 3736,
+        "interpretation": "Small negative values are retained as recorded; likely require dark-offset/measurement review."
+      },
+      {
+        "flag": "constant_reading_run_at_least_60_minutes",
+        "longest_consecutive_same_value_intervals": 37,
+        "longest_constant_duration_minutes": 180,
+        "longest_constant_value": 661.46,
+        "longest_constant_run_start": "2025-04-27T15:30:00",
+        "longest_constant_run_end": "2025-04-27T18:30:00",
+        "constant_run_at_least_60_minutes": true,
+        "interpretation": "Flag for stale-sensor review; a stable signal alone is not proof of sensor failure."
+      }
+    ],
+    "pyranometer_(class_a)_pad_2_poa_irradiance_(w/m2)_o_149725": [
+      {
+        "flag": "negative_irradiance_zero_offset_candidate",
+        "count": 3733,
+        "interpretation": "Small negative values are retained as recorded; likely require dark-offset/measurement review."
+      }
+    ],
+    "pyranometer_(class_a)_pad_2_poa_irradiance_temp_compensated_(w/m2)_o_149726": [
+      {
+        "flag": "negative_irradiance_zero_offset_candidate",
+        "count": 3733,
+        "interpretation": "Small negative values are retained as recorded; likely require dark-offset/measurement review."
+      }
+    ],
+    "weather_station_ambient_temperature_(c)_o_149727": [
+      {
+        "flag": "constant_reading_run_at_least_60_minutes",
+        "longest_consecutive_same_value_intervals": 26,
+        "longest_constant_duration_minutes": 125,
+        "longest_constant_value": 0.9,
+        "longest_constant_run_start": "2025-04-04T01:20:00",
+        "longest_constant_run_end": "2025-04-04T03:25:00",
+        "constant_run_at_least_60_minutes": true,
+        "interpretation": "Flag for stale-sensor review; a stable signal alone is not proof of sensor failure."
+      }
+    ],
+    "thermocouple_pad_1_back-of-module_temperature_1_(c)_o_149728": [
+      {
+        "flag": "constant_reading_run_at_least_60_minutes",
+        "longest_consecutive_same_value_intervals": 24,
+        "longest_constant_duration_minutes": 115,
+        "longest_constant_value": 5.7,
+        "longest_constant_run_start": "2025-04-26T00:05:00",
+        "longest_constant_run_end": "2025-04-26T02:00:00",
+        "constant_run_at_least_60_minutes": true,
+        "interpretation": "Flag for stale-sensor review; a stable signal alone is not proof of sensor failure."
+      }
+    ],
+    "thermocouple_pad_1_back-of-module_temperature_2_(c)_o_149729": [
+      {
+        "flag": "constant_reading_run_at_least_60_minutes",
+        "longest_consecutive_same_value_intervals": 19,
+        "longest_constant_duration_minutes": 90,
+        "longest_constant_value": 1.8,
+        "longest_constant_run_start": "2025-04-14T04:15:00",
+        "longest_constant_run_end": "2025-04-14T05:45:00",
+        "constant_run_at_least_60_minutes": true,
+        "interpretation": "Flag for stale-sensor review; a stable signal alone is not proof of sensor failure."
+      }
+    ],
+    "thermocouple_pad_2_back-of-module_temperature_1_(c)_o_149730": [
+      {
+        "flag": "temperature_outside_minus50_to_100_c",
+        "count": 8524,
+        "interpretation": "Sensor value retained; readings outside this broad physical review range should not be treated as valid without investigation."
+      },
+      {
+        "flag": "constant_reading_run_at_least_60_minutes",
+        "longest_consecutive_same_value_intervals": 8524,
+        "longest_constant_duration_minutes": 42615,
+        "longest_constant_value": 3276.7,
+        "longest_constant_run_start": "2025-04-01T00:00:00",
+        "longest_constant_run_end": "2025-04-30T14:15:00",
+        "constant_run_at_least_60_minutes": true,
+        "interpretation": "Flag for stale-sensor review; a stable signal alone is not proof of sensor failure."
+      }
+    ],
+    "thermocouple_pad_2_back-of-module_temperature_2_(c)_o_149731": [
+      {
+        "flag": "constant_reading_run_at_least_60_minutes",
+        "longest_consecutive_same_value_intervals": 25,
+        "longest_constant_duration_minutes": 120,
+        "longest_constant_value": 5.5,
+        "longest_constant_run_start": "2025-04-26T00:05:00",
+        "longest_constant_run_end": "2025-04-26T02:05:00",
+        "constant_run_at_least_60_minutes": true,
+        "interpretation": "Flag for stale-sensor review; a stable signal alone is not proof of sensor failure."
+      }
+    ]
+  },
+  "sensor_alignment": {
+    "meter_ac_power_(kw)_meter_150150": {
+      "channel_numeric_observations": 8525,
+      "timestamps_in_common_with_target": 8525,
+      "target_timestamps_without_sensor_value": 0,
+      "sensor_timestamps_without_target": 0
+    },
+    "pyranometer_(class_a)_pad_1_poa_irradiance_(w/m2)_o_149723": {
+      "channel_numeric_observations": 8521,
+      "timestamps_in_common_with_target": 8521,
+      "target_timestamps_without_sensor_value": 4,
+      "sensor_timestamps_without_target": 0
+    },
+    "pyranometer_(class_a)_pad_1_poa_irradiance_temp_compensated_(w/m2)_o_149724": {
+      "channel_numeric_observations": 8521,
+      "timestamps_in_common_with_target": 8521,
+      "target_timestamps_without_sensor_value": 4,
+      "sensor_timestamps_without_target": 0
+    },
+    "pyranometer_(class_a)_pad_2_poa_irradiance_(w/m2)_o_149725": {
+      "channel_numeric_observations": 8524,
+      "timestamps_in_common_with_target": 8524,
+      "target_timestamps_without_sensor_value": 1,
+      "sensor_timestamps_without_target": 0
+    },
+    "pyranometer_(class_a)_pad_2_poa_irradiance_temp_compensated_(w/m2)_o_149726": {
+      "channel_numeric_observations": 8524,
+      "timestamps_in_common_with_target": 8524,
+      "target_timestamps_without_sensor_value": 1,
+      "sensor_timestamps_without_target": 0
+    },
+    "weather_station_ambient_temperature_(c)_o_149727": {
+      "channel_numeric_observations": 8524,
+      "timestamps_in_common_with_target": 8524,
+      "target_timestamps_without_sensor_value": 1,
+      "sensor_timestamps_without_target": 0
+    },
+    "thermocouple_pad_1_back-of-module_temperature_1_(c)_o_149728": {
+      "channel_numeric_observations": 8521,
+      "timestamps_in_common_with_target": 8521,
+      "target_timestamps_without_sensor_value": 4,
+      "sensor_timestamps_without_target": 0
+    },
+    "thermocouple_pad_1_back-of-module_temperature_2_(c)_o_149729": {
+      "channel_numeric_observations": 8521,
+      "timestamps_in_common_with_target": 8521,
+      "target_timestamps_without_sensor_value": 4,
+      "sensor_timestamps_without_target": 0
+    },
+    "thermocouple_pad_2_back-of-module_temperature_1_(c)_o_149730": {
+      "channel_numeric_observations": 8524,
+      "timestamps_in_common_with_target": 8524,
+      "target_timestamps_without_sensor_value": 1,
+      "sensor_timestamps_without_target": 0
+    },
+    "thermocouple_pad_2_back-of-module_temperature_2_(c)_o_149731": {
+      "channel_numeric_observations": 8524,
+      "timestamps_in_common_with_target": 8524,
+      "target_timestamps_without_sensor_value": 1,
+      "sensor_timestamps_without_target": 0
+    }
+  },
+  "irradiance_pair_checks": {
+    "pyranometer_(class_a)_pad_1_poa_irradiance_(w/m2)_o_149723__vs__pyranometer_(class_a)_pad_2_poa_irradiance_(w/m2)_o_149725": {
+      "common_observations": 8521,
+      "daylight_like_observations_above_50_w_m2": 4165,
+      "pearson_correlation_all_common": 0.9777932630412738,
+      "pearson_correlation_above_50_w_m2": 0.9386101639468869,
+      "median_left_over_right_when_both_above_50": 0.9881680141983831,
+      "interpretation": "Comparative QC only; low agreement or sustained ratio bias flags a sensor for review, not proof of shading."
+    },
+    "pyranometer_(class_a)_pad_1_poa_irradiance_temp_compensated_(w/m2)_o_149724__vs__pyranometer_(class_a)_pad_2_poa_irradiance_temp_compensated_(w/m2)_o_149726": {
+      "common_observations": 8521,
+      "daylight_like_observations_above_50_w_m2": 4166,
+      "pearson_correlation_all_common": 0.9777340571708132,
+      "pearson_correlation_above_50_w_m2": 0.9384191635488293,
+      "median_left_over_right_when_both_above_50": 0.9886002909000812,
+      "interpretation": "Comparative QC only; low agreement or sustained ratio bias flags a sensor for review, not proof of shading."
+    },
+    "pyranometer_(class_a)_pad_1_poa_irradiance_(w/m2)_o_149723__vs__pyranometer_(class_a)_pad_1_poa_irradiance_temp_compensated_(w/m2)_o_149724": {
+      "common_observations": 8521,
+      "daylight_like_observations_above_50_w_m2": 4147,
+      "pearson_correlation_all_common": 0.9999969693430405,
+      "pearson_correlation_above_50_w_m2": 0.9999919342762075,
+      "median_left_over_right_when_both_above_50": 0.9991778234542525,
+      "interpretation": "Comparative QC only; low agreement or sustained ratio bias flags a sensor for review, not proof of shading."
+    },
+    "pyranometer_(class_a)_pad_2_poa_irradiance_(w/m2)_o_149725__vs__pyranometer_(class_a)_pad_2_poa_irradiance_temp_compensated_(w/m2)_o_149726": {
+      "common_observations": 8524,
+      "daylight_like_observations_above_50_w_m2": 4163,
+      "pearson_correlation_all_common": 0.999997544888011,
+      "pearson_correlation_above_50_w_m2": 0.9999933629439913,
+      "median_left_over_right_when_both_above_50": 0.9993573068094874,
+      "interpretation": "Comparative QC only; low agreement or sustained ratio bias flags a sensor for review, not proof of shading."
+    }
+  },
+  "forecast_alignment": {
+    "issue_rule": "Close of latest fully observed interval; meter records are left-aligned.",
+    "target_rule": "Target label is the start of the 5-minute interval exactly 15 minutes after issue time.",
+    "actual_record_example": {
+      "latest_observed_interval_start": "2025-04-01T07:20:00",
+      "latest_observed_interval_close_issue_time": "2025-04-01T07:25:00",
+      "target_interval_start_issue_plus_15m": "2025-04-01T07:40:00",
+      "target_interval_end": "2025-04-01T07:45:00",
+      "input_timestamp_not_after_issue": true,
+      "target_timestamp_matches_issue_plus_15m": true,
+      "target_power_at_latest_interval_kw": 748.0,
+      "future_target_power_kw_for_verification_only": 220.0,
+      "input_features": {
+        "pyranometer_(class_a)_pad_1_poa_irradiance_(w/m2)_o_149723": 364.28,
+        "pyranometer_(class_a)_pad_1_poa_irradiance_temp_compensated_(w/m2)_o_149724": 367.22,
+        "pyranometer_(class_a)_pad_2_poa_irradiance_(w/m2)_o_149725": 340.54,
+        "pyranometer_(class_a)_pad_2_poa_irradiance_temp_compensated_(w/m2)_o_149726": 343.43,
+        "weather_station_ambient_temperature_(c)_o_149727": -0.8,
+        "thermocouple_pad_1_back-of-module_temperature_1_(c)_o_149728": -0.2,
+        "thermocouple_pad_1_back-of-module_temperature_2_(c)_o_149729": -0.2,
+        "thermocouple_pad_2_back-of-module_temperature_2_(c)_o_149731": -0.5999999999999999
+      }
+    },
+    "verification": "Target value is included only as the audit label in this example; feature values are read at the latest observed interval, before issue time."
+  },
+  "reporting_delay": "Not measurable from these CSV columns; no ingest/receipt timestamp is included.",
+  "interpretation_notes": [
+    "Source files span January 2024 through April 2025; this audit's statistics and derived rows are limited to April 2025 only.",
+    "Only the selected target and potential sensor columns were written to the derived pilot. Original source objects were not changed.",
+    "Duplicate timestamp evidence is saved separately. Exact duplicate selected-channel rows are collapsed in the derived view; conflicting fields are set missing and flagged, not chosen arbitrarily.",
+    "Questionable values are flagged, not clipped or removed. No missing values are interpolated."
+  ],
+  "pilot_acceptance_check": {
+    "pilot_window_is_30_calendar_days": true,
+    "target_missing_limit_5_percent": {
+      "measured_fraction": 0.013310185185185185,
+      "passes": true
+    },
+    "target_duplicate_timestamps": 0,
+    "target_off_grid_timestamps": 0,
+    "pilot_has_at_least_500000_observations": false,
+    "500000_observation_threshold_applies_to_full_history_not_this_30_day_pilot": true,
+    "wind_channel_availability": "Not present in the downloaded environment object headers; excluded from the derived pilot.",
+    "module_temperature_sensor_149730": "Fails sensor plausibility/staleness review; retain source channel for traceability but exclude from candidate inputs pending investigation.",
+    "status": "Pilot is sufficient to reveal major channel and target semantics risks; not a pass for full-history acquisition or model readiness."
+  },
+  "derived_pilot_file": {
+    "path": "ml/data/processed/pvdaq/9068/pilot_2025-04_final/pvdaq_9068_pilot_2025-04.csv",
+    "size_bytes": 794350,
+    "sha256": "d3e51014db7cbf333d5d60e6546eb8503b5aef6f13817776c41093b07c804fc8",
+    "columns": [
+      "timestamp_source",
+      "timestamp_timezone_aware",
+      "meter_ac_power_(kw)_meter_150150",
+      "pyranometer_(class_a)_pad_1_poa_irradiance_(w/m2)_o_149723",
+      "pyranometer_(class_a)_pad_1_poa_irradiance_temp_compensated_(w/m2)_o_149724",
+      "pyranometer_(class_a)_pad_2_poa_irradiance_(w/m2)_o_149725",
+      "pyranometer_(class_a)_pad_2_poa_irradiance_temp_compensated_(w/m2)_o_149726",
+      "weather_station_ambient_temperature_(c)_o_149727",
+      "thermocouple_pad_1_back-of-module_temperature_1_(c)_o_149728",
+      "thermocouple_pad_1_back-of-module_temperature_2_(c)_o_149729",
+      "thermocouple_pad_2_back-of-module_temperature_1_(c)_o_149730",
+      "thermocouple_pad_2_back-of-module_temperature_2_(c)_o_149731",
+      "duplicate_conflict_columns"
+    ],
+    "rows": 8640
+  },
+  "duplicate_evidence_file": null
+}

@@ -1,0 +1,27 @@
+feature_group,feature_name,source_definition,interval_rows,available_at_issue_time,missing_or_gap_rule,notes
+persistence,last_observed_target,y_i (latest fully closed interval),0,yes if y_i is numeric,require latest target numeric,Prediction baseline only
+lag,target_lag_5m,y_(i-1),1,yes if timestamp semantics validated,require historical point and intervening complete grid,Exactly 5 minutes before issue by adopted interval convention
+lag,target_lag_10m,y_(i-2),2,yes if timestamp semantics validated,require historical point and intervening complete grid,
+lag,target_lag_15m,y_(i-3),3,yes if timestamp semantics validated,require historical point and intervening complete grid,
+lag,target_lag_30m,y_(i-6),6,yes if timestamp semantics validated,require historical point and intervening complete grid,
+lag,target_lag_60m,y_(i-12),12,yes if timestamp semantics validated,require historical point and intervening complete grid,
+lag,target_lag_3h,y_(i-36),36,yes if timestamp semantics validated,require historical point and intervening complete grid,
+lag,target_lag_6h,y_(i-72),72,yes if timestamp semantics validated,require historical point and intervening complete grid,
+lag,target_lag_12h,y_(i-144),144,yes if timestamp semantics validated,require historical point and intervening complete grid,
+lag,target_lag_24h,y_(i-288),288,yes if timestamp semantics validated,requires 289 target rows inclusive of latest plus exact 24h lag,Distinguish exact lag from 288-row 24h trailing window
+rolling_mean,mean_15m,mean(y_(i-2)..y_i),3,yes,all 3 latest historical target values present,right aligned; current latest closed target allowed
+rolling_mean,mean_30m,mean(y_(i-5)..y_i),6,yes,all 6 latest historical target values present,right aligned
+rolling_mean,mean_1h,mean(last 12 closed intervals through i),12,yes,all 12 latest historical target values present,right aligned
+rolling_mean,mean_3h,mean(last 36 closed intervals through i),36,yes,all 36 latest historical target values present,right aligned
+rolling_mean,mean_6h,mean(last 72 closed intervals through i),72,yes,all 72 latest historical target values present,right aligned
+rolling_mean,mean_24h,mean(last 288 closed intervals through i),288,yes,all 288 latest historical target values present,right aligned
+rolling_std,std_15m,sample std(y_(i-2)..y_i),3,yes,all 3 latest historical target values present,Right aligned; define ddof consistently
+rolling_std,std_30m,sample std(last 6 closed intervals through i),6,yes,all 6 latest historical target values present,Right aligned; define ddof consistently
+rolling_std,std_1h,sample std(last 12 closed intervals through i),12,yes,all 12 latest historical target values present,Right aligned; define ddof consistently
+rolling_std,std_3h,sample std(last 36 closed intervals through i),36,yes,all 36 latest historical target values present,Right aligned; define ddof consistently
+rolling_std,std_6h,sample std(last 72 closed intervals through i),72,yes,all 72 latest historical target values present,Right aligned; define ddof consistently
+rolling_std,std_24h,sample std(last 288 closed intervals through i),288,yes,all 288 latest historical target values present,Right aligned; define ddof consistently
+calendar,recorded_hour,hour(timestamp label),n/a,static from label but timezone meaning unresolved,none,Use recorded label only; do not call local hour
+calendar,recorded_day_of_week,weekday(timestamp label),n/a,static from label but timezone meaning unresolved,none,Descriptive in baseline; do not infer operator schedule
+calendar,recorded_day_of_year,day-of-year(timestamp label),n/a,static from label but timezone meaning unresolved,none,Seasonality encoding only after timezone semantics review
+calendar,recorded_month,month(timestamp label),n/a,static from label but timezone meaning unresolved,none,Raw month or cyclic encoding; source period retained

@@ -1,0 +1,1168 @@
+{
+  "scope": {
+    "system_id": 9068,
+    "target_definition": "inverter_1_ac_power_(kw)_inv_150143 + inverter_2_ac_power_(kw)_inv_150144; only when both are numeric",
+    "forecast_interval_minutes": 5,
+    "horizon_minutes": 15,
+    "issue_target_alignment": "Each source label t represents an interval beginning at t. Issue time is t+5 (close of latest interval); target interval begins issue+15=t+20, i.e. row offset 4 from the latest observed interval label.",
+    "historical_lookback": "288 consecutive 5-minute observations ending at issue interval label t",
+    "future_intermediate_continuity": "For sample counts, require valid paired target labels at t+5,t+10,t+15,t+20 so no sample crosses a missing-target segment."
+  },
+  "target_availability": {
+    "legacy": {
+      "object": "legacy",
+      "first_timestamp": "2017-08-23T18:15:00",
+      "last_timestamp": "2023-11-16T13:40:00",
+      "expected_5m_timestamps": 655434,
+      "actual_source_rows": 655434,
+      "missing_source_rows_on_grid": 0,
+      "timestamp_parse_failures": 0,
+      "duplicate_timestamp_rows": 0,
+      "numeric_inverter_1": 622396,
+      "numeric_inverter_2": 629750,
+      "paired_target_numeric": 613497,
+      "inverter_1_null_on_existing_rows": 33038,
+      "inverter_2_null_on_existing_rows": 25684,
+      "both_channels_null_on_existing_rows": 16785,
+      "only_inverter_1_null_existing_rows": 16253,
+      "only_inverter_2_null_existing_rows": 8899,
+      "combined_target_missing_on_expected_grid": 41937,
+      "inverter_1_missing_pct_of_expected_grid": 5.040629567584227,
+      "inverter_2_missing_pct_of_expected_grid": 3.9186249111275893,
+      "combined_target_missing_pct_of_expected_grid": 6.3983558985344064,
+      "adjacent_source_delta_5m_count": 655433,
+      "adjacent_source_delta_other_count": 0,
+      "timestamp_gap_records": [],
+      "source_timestamp_gap_runs": {
+        "run_count": 0,
+        "total_missing_intervals": 0,
+        "total_missing_minutes": 0,
+        "longest_run": null,
+        "run_counts_duration_gt_minutes": {
+          "15": 0,
+          "60": 0,
+          "360": 0,
+          "1440": 0,
+          "10080": 0
+        }
+      },
+      "inverter_1_null_runs_existing_rows": {
+        "run_count": 1340,
+        "total_missing_intervals": 33038,
+        "total_missing_minutes": 165190,
+        "longest_run": {
+          "object": "legacy",
+          "period_type": "inverter_1_null_existing_rows",
+          "start_timestamp": "2022-03-16T05:30:00",
+          "end_timestamp": "2022-04-03T07:25:00",
+          "interval_count": 5208,
+          "missing_duration_minutes": 26040,
+          "elapsed_between_endpoint_labels_minutes": 26035.0,
+          "cause": ""
+        },
+        "run_counts_duration_gt_minutes": {
+          "15": 186,
+          "60": 76,
+          "360": 49,
+          "1440": 30,
+          "10080": 2
+        }
+      },
+      "inverter_2_null_runs_existing_rows": {
+        "run_count": 730,
+        "total_missing_intervals": 25684,
+        "total_missing_minutes": 128420,
+        "longest_run": {
+          "object": "legacy",
+          "period_type": "inverter_2_null_existing_rows",
+          "start_timestamp": "2021-07-30T18:00:00",
+          "end_timestamp": "2021-08-10T10:45:00",
+          "interval_count": 3082,
+          "missing_duration_minutes": 15410,
+          "elapsed_between_endpoint_labels_minutes": 15405.0,
+          "cause": ""
+        },
+        "run_counts_duration_gt_minutes": {
+          "15": 114,
+          "60": 57,
+          "360": 41,
+          "1440": 24,
+          "10080": 1
+        }
+      },
+      "paired_target_null_runs_existing_rows": {
+        "run_count": 1394,
+        "total_missing_intervals": 41937,
+        "total_missing_minutes": 209685,
+        "longest_run": {
+          "object": "legacy",
+          "period_type": "paired_target_null_existing_rows",
+          "start_timestamp": "2022-03-16T05:30:00",
+          "end_timestamp": "2022-04-03T07:25:00",
+          "interval_count": 5208,
+          "missing_duration_minutes": 26040,
+          "elapsed_between_endpoint_labels_minutes": 26035.0,
+          "cause": ""
+        },
+        "run_counts_duration_gt_minutes": {
+          "15": 220,
+          "60": 84,
+          "360": 56,
+          "1440": 34,
+          "10080": 3
+        }
+      },
+      "target_unavailable_runs_on_grid": {
+        "run_count": 1394,
+        "total_missing_intervals": 41937,
+        "total_missing_minutes": 209685,
+        "longest_run": {
+          "object": "legacy",
+          "period_type": "combined_target_unavailable_on_expected_grid",
+          "start_timestamp": "2022-03-16T05:30:00",
+          "end_timestamp": "2022-04-03T07:25:00",
+          "interval_count": 5208,
+          "missing_duration_minutes": 26040,
+          "elapsed_between_endpoint_labels_minutes": 26035.0,
+          "cause": "inverter_1 null in present row"
+        },
+        "run_counts_duration_gt_minutes": {
+          "15": 220,
+          "60": 84,
+          "360": 56,
+          "1440": 34,
+          "10080": 3
+        }
+      }
+    },
+    "increment": {
+      "object": "increment",
+      "first_timestamp": "2024-01-01T00:05:00",
+      "last_timestamp": "2025-04-30T14:20:00",
+      "expected_5m_timestamps": 139852,
+      "actual_source_rows": 137249,
+      "missing_source_rows_on_grid": 2603,
+      "timestamp_parse_failures": 0,
+      "duplicate_timestamp_rows": 0,
+      "numeric_inverter_1": 137166,
+      "numeric_inverter_2": 135874,
+      "paired_target_numeric": 135791,
+      "inverter_1_null_on_existing_rows": 83,
+      "inverter_2_null_on_existing_rows": 1375,
+      "both_channels_null_on_existing_rows": 0,
+      "only_inverter_1_null_existing_rows": 83,
+      "only_inverter_2_null_existing_rows": 1375,
+      "combined_target_missing_on_expected_grid": 4061,
+      "inverter_1_missing_pct_of_expected_grid": 1.9206017790235392,
+      "inverter_2_missing_pct_of_expected_grid": 2.844435546148786,
+      "combined_target_missing_pct_of_expected_grid": 2.9037840002288133,
+      "adjacent_source_delta_5m_count": 137227,
+      "adjacent_source_delta_other_count": 21,
+      "timestamp_gap_records": [
+        {
+          "object": "increment",
+          "previous_observed_timestamp": "2024-03-10T01:55:00",
+          "next_observed_timestamp": "2024-03-10T03:00:00",
+          "elapsed_minutes": 65.0,
+          "omitted_5m_grid_labels": 12
+        },
+        {
+          "object": "increment",
+          "previous_observed_timestamp": "2024-04-06T22:50:00",
+          "next_observed_timestamp": "2024-04-08T09:10:00",
+          "elapsed_minutes": 2060.0,
+          "omitted_5m_grid_labels": 411
+        },
+        {
+          "object": "increment",
+          "previous_observed_timestamp": "2024-04-24T05:25:00",
+          "next_observed_timestamp": "2024-04-24T12:35:00",
+          "elapsed_minutes": 430.0,
+          "omitted_5m_grid_labels": 85
+        },
+        {
+          "object": "increment",
+          "previous_observed_timestamp": "2024-05-23T03:05:00",
+          "next_observed_timestamp": "2024-05-23T13:40:00",
+          "elapsed_minutes": 635.0,
+          "omitted_5m_grid_labels": 126
+        },
+        {
+          "object": "increment",
+          "previous_observed_timestamp": "2024-05-24T06:05:00",
+          "next_observed_timestamp": "2024-05-24T12:15:00",
+          "elapsed_minutes": 370.0,
+          "omitted_5m_grid_labels": 73
+        },
+        {
+          "object": "increment",
+          "previous_observed_timestamp": "2024-05-28T21:20:00",
+          "next_observed_timestamp": "2024-05-29T11:40:00",
+          "elapsed_minutes": 860.0,
+          "omitted_5m_grid_labels": 171
+        },
+        {
+          "object": "increment",
+          "previous_observed_timestamp": "2024-06-08T00:00:00",
+          "next_observed_timestamp": "2024-06-10T10:50:00",
+          "elapsed_minutes": 3530.0,
+          "omitted_5m_grid_labels": 705
+        },
+        {
+          "object": "increment",
+          "previous_observed_timestamp": "2024-07-11T05:10:00",
+          "next_observed_timestamp": "2024-07-11T16:40:00",
+          "elapsed_minutes": 690.0,
+          "omitted_5m_grid_labels": 137
+        },
+        {
+          "object": "increment",
+          "previous_observed_timestamp": "2024-09-11T18:35:00",
+          "next_observed_timestamp": "2024-09-12T08:00:00",
+          "elapsed_minutes": 805.0,
+          "omitted_5m_grid_labels": 160
+        },
+        {
+          "object": "increment",
+          "previous_observed_timestamp": "2024-09-16T13:40:00",
+          "next_observed_timestamp": "2024-09-16T15:50:00",
+          "elapsed_minutes": 130.0,
+          "omitted_5m_grid_labels": 25
+        },
+        {
+          "object": "increment",
+          "previous_observed_timestamp": "2024-09-19T10:20:00",
+          "next_observed_timestamp": "2024-09-19T12:30:00",
+          "elapsed_minutes": 130.0,
+          "omitted_5m_grid_labels": 25
+        },
+        {
+          "object": "increment",
+          "previous_observed_timestamp": "2024-10-06T08:10:00",
+          "next_observed_timestamp": "2024-10-07T08:25:00",
+          "elapsed_minutes": 1455.0,
+          "omitted_5m_grid_labels": 290
+        },
+        {
+          "object": "increment",
+          "previous_observed_timestamp": "2024-10-15T07:30:00",
+          "next_observed_timestamp": "2024-10-15T08:55:00",
+          "elapsed_minutes": 85.0,
+          "omitted_5m_grid_labels": 16
+        },
+        {
+          "object": "increment",
+          "previous_observed_timestamp": "2024-10-26T17:55:00",
+          "next_observed_timestamp": "2024-10-26T19:00:00",
+          "elapsed_minutes": 65.0,
+          "omitted_5m_grid_labels": 12
+        },
+        {
+          "object": "increment",
+          "previous_observed_timestamp": "2025-02-10T10:50:00",
+          "next_observed_timestamp": "2025-02-10T14:30:00",
+          "elapsed_minutes": 220.0,
+          "omitted_5m_grid_labels": 43
+        },
+        {
+          "object": "increment",
+          "previous_observed_timestamp": "2025-02-11T11:40:00",
+          "next_observed_timestamp": "2025-02-11T11:55:00",
+          "elapsed_minutes": 15.0,
+          "omitted_5m_grid_labels": 2
+        },
+        {
+          "object": "increment",
+          "previous_observed_timestamp": "2025-02-14T09:45:00",
+          "next_observed_timestamp": "2025-02-14T10:55:00",
+          "elapsed_minutes": 70.0,
+          "omitted_5m_grid_labels": 13
+        },
+        {
+          "object": "increment",
+          "previous_observed_timestamp": "2025-02-19T13:15:00",
+          "next_observed_timestamp": "2025-02-19T17:00:00",
+          "elapsed_minutes": 225.0,
+          "omitted_5m_grid_labels": 44
+        },
+        {
+          "object": "increment",
+          "previous_observed_timestamp": "2025-03-09T01:55:00",
+          "next_observed_timestamp": "2025-03-09T03:00:00",
+          "elapsed_minutes": 65.0,
+          "omitted_5m_grid_labels": 12
+        },
+        {
+          "object": "increment",
+          "previous_observed_timestamp": "2025-03-26T03:00:00",
+          "next_observed_timestamp": "2025-03-26T03:10:00",
+          "elapsed_minutes": 10.0,
+          "omitted_5m_grid_labels": 1
+        },
+        {
+          "object": "increment",
+          "previous_observed_timestamp": "2025-03-29T02:55:00",
+          "next_observed_timestamp": "2025-03-29T23:00:00",
+          "elapsed_minutes": 1205.0,
+          "omitted_5m_grid_labels": 240
+        }
+      ],
+      "source_timestamp_gap_runs": {
+        "run_count": 21,
+        "total_missing_intervals": 2603,
+        "total_missing_minutes": 13015,
+        "longest_run": {
+          "object": "increment",
+          "period_type": "source_timestamp_gap",
+          "start_timestamp": "2024-06-08T00:05:00",
+          "end_timestamp": "2024-06-10T10:45:00",
+          "interval_count": 705,
+          "missing_duration_minutes": 3525,
+          "elapsed_between_endpoint_labels_minutes": 3520.0,
+          "cause": ""
+        },
+        "run_counts_duration_gt_minutes": {
+          "15": 19,
+          "60": 16,
+          "360": 10,
+          "1440": 3,
+          "10080": 0
+        }
+      },
+      "inverter_1_null_runs_existing_rows": {
+        "run_count": 14,
+        "total_missing_intervals": 83,
+        "total_missing_minutes": 415,
+        "longest_run": {
+          "object": "increment",
+          "period_type": "inverter_1_null_existing_rows",
+          "start_timestamp": "2024-01-03T10:35:00",
+          "end_timestamp": "2024-01-03T12:25:00",
+          "interval_count": 23,
+          "missing_duration_minutes": 115,
+          "elapsed_between_endpoint_labels_minutes": 110.0,
+          "cause": ""
+        },
+        "run_counts_duration_gt_minutes": {
+          "15": 8,
+          "60": 1,
+          "360": 0,
+          "1440": 0,
+          "10080": 0
+        }
+      },
+      "inverter_2_null_runs_existing_rows": {
+        "run_count": 32,
+        "total_missing_intervals": 1375,
+        "total_missing_minutes": 6875,
+        "longest_run": {
+          "object": "increment",
+          "period_type": "inverter_2_null_existing_rows",
+          "start_timestamp": "2024-09-17T12:50:00",
+          "end_timestamp": "2024-09-19T10:00:00",
+          "interval_count": 543,
+          "missing_duration_minutes": 2715,
+          "elapsed_between_endpoint_labels_minutes": 2710.0,
+          "cause": ""
+        },
+        "run_counts_duration_gt_minutes": {
+          "15": 14,
+          "60": 9,
+          "360": 3,
+          "1440": 3,
+          "10080": 0
+        }
+      },
+      "paired_target_null_runs_existing_rows": {
+        "run_count": 46,
+        "total_missing_intervals": 1458,
+        "total_missing_minutes": 7290,
+        "longest_run": {
+          "object": "increment",
+          "period_type": "paired_target_null_existing_rows",
+          "start_timestamp": "2024-09-17T12:50:00",
+          "end_timestamp": "2024-09-19T10:00:00",
+          "interval_count": 543,
+          "missing_duration_minutes": 2715,
+          "elapsed_between_endpoint_labels_minutes": 2710.0,
+          "cause": ""
+        },
+        "run_counts_duration_gt_minutes": {
+          "15": 22,
+          "60": 10,
+          "360": 3,
+          "1440": 3,
+          "10080": 0
+        }
+      },
+      "target_unavailable_runs_on_grid": {
+        "run_count": 58,
+        "total_missing_intervals": 4061,
+        "total_missing_minutes": 20305,
+        "longest_run": {
+          "object": "increment",
+          "period_type": "combined_target_unavailable_on_expected_grid",
+          "start_timestamp": "2024-06-08T00:05:00",
+          "end_timestamp": "2024-06-10T10:45:00",
+          "interval_count": 705,
+          "missing_duration_minutes": 3525,
+          "elapsed_between_endpoint_labels_minutes": 3520.0,
+          "cause": "source timestamp absent; inverter_1 null in present row; inverter_2 null in present row"
+        },
+        "run_counts_duration_gt_minutes": {
+          "15": 39,
+          "60": 25,
+          "360": 13,
+          "1440": 6,
+          "10080": 0
+        }
+      }
+    },
+    "object_spans_combined_not_stitched": {
+      "object_spans_kept_separate": true,
+      "expected_5m_timestamps_sum_object_spans": 795286,
+      "actual_source_rows_sum_objects": 792683,
+      "paired_target_numeric_sum_objects": 749288,
+      "combined_missing_target_rows_within_existing_source_rows": 43395,
+      "absent_increment_timestamp_grid_labels": 2603,
+      "inter_object_gap_missing_5m_labels": 13095,
+      "not_a_contiguous_total_coverage_span": true
+    }
+  },
+  "continuous_valid_target_segments": {
+    "segment_count": 1453,
+    "by_object": {
+      "legacy": 1394,
+      "increment": 59
+    },
+    "counts_and_history_by_minimum_duration": {
+      "24h": {
+        "segments_meeting_duration": 202,
+        "sum_valid_observations_in_those_segments": 721306,
+        "by_object": {
+          "legacy": {
+            "segment_count": 171,
+            "valid_observations": 587259
+          },
+          "increment": {
+            "segment_count": 31,
+            "valid_observations": 134047
+          }
+        }
+      },
+      "7d": {
+        "segments_meeting_duration": 91,
+        "sum_valid_observations_in_those_segments": 622968,
+        "by_object": {
+          "legacy": {
+            "segment_count": 76,
+            "valid_observations": 506108
+          },
+          "increment": {
+            "segment_count": 15,
+            "valid_observations": 116860
+          }
+        }
+      },
+      "30d": {
+        "segments_meeting_duration": 25,
+        "sum_valid_observations_in_those_segments": 340286,
+        "by_object": {
+          "legacy": {
+            "segment_count": 21,
+            "valid_observations": 277533
+          },
+          "increment": {
+            "segment_count": 4,
+            "valid_observations": 62753
+          }
+        }
+      }
+    },
+    "longest_segment": {
+      "object": "legacy",
+      "segment_id": "legacy_00036",
+      "start_timestamp": "2018-07-02T12:55:00",
+      "end_timestamp": "2018-10-27T17:55:00",
+      "expected_5m_intervals": 33757,
+      "valid_paired_observations": 33757,
+      "missingness_pct_within_segment": 0.0,
+      "elapsed_label_span_minutes": 168780.0,
+      "span_days_by_interval_count": 117.21180555555556
+    },
+    "lookback_sample_feasibility": {
+      "24h": {
+        "lookback_intervals": 288,
+        "required_horizon_offset_intervals": 4,
+        "segment_count_with_at_least_one_sample": 202,
+        "paired_target_forecast_samples": 662524,
+        "target_observations_in_segments_meeting_minimum": 721306,
+        "longest_usable_segment_count": 33757,
+        "longest_usable_segment_start": "2018-07-02T12:55:00",
+        "longest_usable_segment_end": "2018-10-27T17:55:00",
+        "paired_target_forecast_samples_by_object": {
+          "legacy": 537498,
+          "increment": 125026
+        }
+      },
+      "7d": {
+        "lookback_intervals": 2016,
+        "required_horizon_offset_intervals": 4,
+        "segment_count_with_at_least_one_sample": 91,
+        "paired_target_forecast_samples": 439239,
+        "target_observations_in_segments_meeting_minimum": 622968,
+        "longest_usable_segment_count": 33757,
+        "longest_usable_segment_start": "2018-07-02T12:55:00",
+        "longest_usable_segment_end": "2018-10-27T17:55:00",
+        "paired_target_forecast_samples_by_object": {
+          "legacy": 352664,
+          "increment": 86575
+        }
+      },
+      "30d": {
+        "lookback_intervals": 8640,
+        "required_horizon_offset_intervals": 4,
+        "segment_count_with_at_least_one_sample": 25,
+        "paired_target_forecast_samples": 124211,
+        "target_observations_in_segments_meeting_minimum": 340286,
+        "longest_usable_segment_count": 33757,
+        "longest_usable_segment_start": "2018-07-02T12:55:00",
+        "longest_usable_segment_end": "2018-10-27T17:55:00",
+        "paired_target_forecast_samples_by_object": {
+          "legacy": 96030,
+          "increment": 28181
+        }
+      }
+    }
+  },
+  "missing_periods_output": "missing_periods.csv",
+  "segment_inventory_output": "target_segments.csv",
+  "inter_object_gap": {
+    "last_paired_legacy_timestamp": "2023-11-16T12:45:00",
+    "first_paired_increment_timestamp": "2024-01-01T00:05:00",
+    "elapsed": "45 days 11:20:00",
+    "missing_five_minute_labels": 13095,
+    "overlap": false
+  },
+  "forecast_sample_feasibility": {
+    "target_only_24h_lookback_samples": 662524,
+    "weather_informed_increment_24h_availability_only": {
+      "candidate_feature_set_poa_pad2_raw": 124733,
+      "availability_only_poa_pad2_plus_ambient": 124733,
+      "availability_only_poa_pad2_plus_ambient_plus_three_module_channels": 124733
+    },
+    "candidate_poa_input": "Pad 2 raw POA only, conditional; weather samples are not model features or a training dataset."
+  },
+  "annual_sample_availability": [
+    {
+      "object": "legacy",
+      "sample_type": "target-only 24h lookback",
+      "year": 2017,
+      "valid_samples": 30485,
+      "first_issue_interval_label": "2017-08-26T19:50:00",
+      "last_issue_interval_label": "2017-12-31T23:55:00"
+    },
+    {
+      "object": "legacy",
+      "sample_type": "target-only 24h lookback",
+      "year": 2018,
+      "valid_samples": 100122,
+      "first_issue_interval_label": "2018-01-01T00:00:00",
+      "last_issue_interval_label": "2018-12-31T23:55:00"
+    },
+    {
+      "object": "legacy",
+      "sample_type": "target-only 24h lookback",
+      "year": 2019,
+      "valid_samples": 99069,
+      "first_issue_interval_label": "2019-01-01T00:00:00",
+      "last_issue_interval_label": "2019-12-31T23:55:00"
+    },
+    {
+      "object": "legacy",
+      "sample_type": "target-only 24h lookback",
+      "year": 2020,
+      "valid_samples": 71731,
+      "first_issue_interval_label": "2020-01-01T00:00:00",
+      "last_issue_interval_label": "2020-12-31T23:55:00"
+    },
+    {
+      "object": "legacy",
+      "sample_type": "target-only 24h lookback",
+      "year": 2021,
+      "valid_samples": 69549,
+      "first_issue_interval_label": "2021-01-01T00:00:00",
+      "last_issue_interval_label": "2021-12-31T23:55:00"
+    },
+    {
+      "object": "legacy",
+      "sample_type": "target-only 24h lookback",
+      "year": 2022,
+      "valid_samples": 94052,
+      "first_issue_interval_label": "2022-01-01T00:00:00",
+      "last_issue_interval_label": "2022-12-31T23:55:00"
+    },
+    {
+      "object": "legacy",
+      "sample_type": "target-only 24h lookback",
+      "year": 2023,
+      "valid_samples": 72490,
+      "first_issue_interval_label": "2023-01-01T00:00:00",
+      "last_issue_interval_label": "2023-11-16T12:25:00"
+    },
+    {
+      "object": "increment",
+      "sample_type": "target-only 24h lookback",
+      "year": 2024,
+      "valid_samples": 93925,
+      "first_issue_interval_label": "2024-01-02T00:00:00",
+      "last_issue_interval_label": "2024-12-31T23:55:00"
+    },
+    {
+      "object": "increment",
+      "sample_type": "target-only 24h lookback",
+      "year": 2025,
+      "valid_samples": 31101,
+      "first_issue_interval_label": "2025-01-01T00:00:00",
+      "last_issue_interval_label": "2025-04-30T14:00:00"
+    },
+    {
+      "object": "increment",
+      "sample_type": "candidate POA-pad2 weather informed 24h lookback",
+      "year": 2024,
+      "valid_samples": 93632,
+      "first_issue_interval_label": "2024-01-02T00:00:00",
+      "last_issue_interval_label": "2024-12-31T23:55:00"
+    },
+    {
+      "object": "increment",
+      "sample_type": "candidate POA-pad2 weather informed 24h lookback",
+      "year": 2025,
+      "valid_samples": 31101,
+      "first_issue_interval_label": "2025-01-01T00:00:00",
+      "last_issue_interval_label": "2025-04-30T14:00:00"
+    }
+  ],
+  "feature_availability_matrix": [
+    {
+      "name": "POA pad 1 raw",
+      "feature": "pyranometer_(class_a)_pad_1_poa_irradiance_(w/m2)_o_149723",
+      "source": "irradiance object",
+      "status": "present",
+      "source_rows": 137243,
+      "timestamp_parse_failures": 0,
+      "numeric_observations": 137160,
+      "source_null_values": 83,
+      "source_missingness_pct": 0.060476672762909585,
+      "first_numeric_timestamp": "2024-01-01T00:05:00",
+      "last_numeric_timestamp": "2025-04-30T14:15:00",
+      "source_unique_timestamps": 137243,
+      "source_duplicate_timestamps": 0,
+      "source_5m_adjacent_deltas": 137220,
+      "source_non5m_adjacent_deltas": 22,
+      "numeric_values_on_target_source_timestamps": 137160,
+      "target_source_rows": 137249,
+      "missingness_on_target_source_timestamps_pct": 0.06484564550561389,
+      "numeric_values_on_target_expected_grid": 137160,
+      "target_expected_grid_timestamps": 139852,
+      "missingness_on_target_expected_grid_pct": 1.9248920287160711,
+      "note": "Timestamp-label exact match; no timezone conversion or imputation.",
+      "feature_quality_status": "POA pad 1 had a 180-minute constant-value flag in April; requires sensor review."
+    },
+    {
+      "name": "POA pad 1 temperature-compensated",
+      "feature": "pyranometer_(class_a)_pad_1_poa_irradiance_temp_compensated_(w/m2)_o_149724",
+      "source": "irradiance object",
+      "status": "present",
+      "source_rows": 137243,
+      "timestamp_parse_failures": 0,
+      "numeric_observations": 137160,
+      "source_null_values": 83,
+      "source_missingness_pct": 0.060476672762909585,
+      "first_numeric_timestamp": "2024-01-01T00:05:00",
+      "last_numeric_timestamp": "2025-04-30T14:15:00",
+      "source_unique_timestamps": 137243,
+      "source_duplicate_timestamps": 0,
+      "source_5m_adjacent_deltas": 137220,
+      "source_non5m_adjacent_deltas": 22,
+      "numeric_values_on_target_source_timestamps": 137160,
+      "target_source_rows": 137249,
+      "missingness_on_target_source_timestamps_pct": 0.06484564550561389,
+      "numeric_values_on_target_expected_grid": 137160,
+      "target_expected_grid_timestamps": 139852,
+      "missingness_on_target_expected_grid_pct": 1.9248920287160711,
+      "note": "Timestamp-label exact match; no timezone conversion or imputation.",
+      "feature_quality_status": "POA pad 1 had a 180-minute constant-value flag in April; requires sensor review."
+    },
+    {
+      "name": "POA pad 2 raw",
+      "feature": "pyranometer_(class_a)_pad_2_poa_irradiance_(w/m2)_o_149725",
+      "source": "irradiance object",
+      "status": "present",
+      "source_rows": 137243,
+      "timestamp_parse_failures": 0,
+      "numeric_observations": 135867,
+      "source_null_values": 1376,
+      "source_missingness_pct": 1.0026012255634167,
+      "first_numeric_timestamp": "2024-01-01T00:05:00",
+      "last_numeric_timestamp": "2025-04-30T14:15:00",
+      "source_unique_timestamps": 137243,
+      "source_duplicate_timestamps": 0,
+      "source_5m_adjacent_deltas": 137220,
+      "source_non5m_adjacent_deltas": 22,
+      "numeric_values_on_target_source_timestamps": 135867,
+      "target_source_rows": 137249,
+      "missingness_on_target_source_timestamps_pct": 1.0069290122332402,
+      "numeric_values_on_target_expected_grid": 135867,
+      "target_expected_grid_timestamps": 139852,
+      "missingness_on_target_expected_grid_pct": 2.84944083745674,
+      "note": "Timestamp-label exact match; no timezone conversion or imputation.",
+      "feature_quality_status": "No >60-minute constant run in April; small negative dark-offset values and documented POA shading/tracker-stall representativeness concerns remain. Conditional only."
+    },
+    {
+      "name": "POA pad 2 temperature-compensated",
+      "feature": "pyranometer_(class_a)_pad_2_poa_irradiance_temp_compensated_(w/m2)_o_149726",
+      "source": "irradiance object",
+      "status": "present",
+      "source_rows": 137243,
+      "timestamp_parse_failures": 0,
+      "numeric_observations": 135867,
+      "source_null_values": 1376,
+      "source_missingness_pct": 1.0026012255634167,
+      "first_numeric_timestamp": "2024-01-01T00:05:00",
+      "last_numeric_timestamp": "2025-04-30T14:15:00",
+      "source_unique_timestamps": 137243,
+      "source_duplicate_timestamps": 0,
+      "source_5m_adjacent_deltas": 137220,
+      "source_non5m_adjacent_deltas": 22,
+      "numeric_values_on_target_source_timestamps": 135867,
+      "target_source_rows": 137249,
+      "missingness_on_target_source_timestamps_pct": 1.0069290122332402,
+      "numeric_values_on_target_expected_grid": 135867,
+      "target_expected_grid_timestamps": 139852,
+      "missingness_on_target_expected_grid_pct": 2.84944083745674,
+      "note": "Timestamp-label exact match; no timezone conversion or imputation.",
+      "feature_quality_status": "No >60-minute constant run in April; small negative dark-offset values and documented POA shading/tracker-stall representativeness concerns remain. Conditional only."
+    },
+    {
+      "name": "Ambient temperature",
+      "feature": "weather_station_ambient_temperature_(c)_o_149727",
+      "source": "environment object",
+      "status": "present",
+      "source_rows": 137249,
+      "timestamp_parse_failures": 0,
+      "numeric_observations": 135867,
+      "source_null_values": 1382,
+      "source_missingness_pct": 1.0069290122332402,
+      "first_numeric_timestamp": "2024-01-01T00:05:00",
+      "last_numeric_timestamp": "2025-04-30T14:15:00",
+      "source_unique_timestamps": 137249,
+      "source_duplicate_timestamps": 0,
+      "source_5m_adjacent_deltas": 137227,
+      "source_non5m_adjacent_deltas": 21,
+      "numeric_values_on_target_source_timestamps": 135867,
+      "target_source_rows": 137249,
+      "missingness_on_target_source_timestamps_pct": 1.0069290122332402,
+      "numeric_values_on_target_expected_grid": 135867,
+      "target_expected_grid_timestamps": 139852,
+      "missingness_on_target_expected_grid_pct": 2.84944083745674,
+      "note": "Timestamp-label exact match; no timezone conversion or imputation.",
+      "feature_quality_status": "Flagged in prior April audit for a 125-minute constant-value run; not cleared as a valid feature."
+    },
+    {
+      "name": "Module temperature pad 1 sensor 1",
+      "feature": "thermocouple_pad_1_back-of-module_temperature_1_(c)_o_149728",
+      "source": "environment object",
+      "status": "present",
+      "source_rows": 137249,
+      "timestamp_parse_failures": 0,
+      "numeric_observations": 137160,
+      "source_null_values": 89,
+      "source_missingness_pct": 0.06484564550561389,
+      "first_numeric_timestamp": "2024-01-01T00:05:00",
+      "last_numeric_timestamp": "2025-04-30T14:15:00",
+      "source_unique_timestamps": 137249,
+      "source_duplicate_timestamps": 0,
+      "source_5m_adjacent_deltas": 137227,
+      "source_non5m_adjacent_deltas": 21,
+      "numeric_values_on_target_source_timestamps": 137160,
+      "target_source_rows": 137249,
+      "missingness_on_target_source_timestamps_pct": 0.06484564550561389,
+      "numeric_values_on_target_expected_grid": 137160,
+      "target_expected_grid_timestamps": 139852,
+      "missingness_on_target_expected_grid_pct": 1.9248920287160711,
+      "note": "Timestamp-label exact match; no timezone conversion or imputation.",
+      "feature_quality_status": "Flagged in prior April audit for a 90\u2013120-minute constant-value run; not cleared as a valid feature."
+    },
+    {
+      "name": "Module temperature pad 1 sensor 2",
+      "feature": "thermocouple_pad_1_back-of-module_temperature_2_(c)_o_149729",
+      "source": "environment object",
+      "status": "present",
+      "source_rows": 137249,
+      "timestamp_parse_failures": 0,
+      "numeric_observations": 137160,
+      "source_null_values": 89,
+      "source_missingness_pct": 0.06484564550561389,
+      "first_numeric_timestamp": "2024-01-01T00:05:00",
+      "last_numeric_timestamp": "2025-04-30T14:15:00",
+      "source_unique_timestamps": 137249,
+      "source_duplicate_timestamps": 0,
+      "source_5m_adjacent_deltas": 137227,
+      "source_non5m_adjacent_deltas": 21,
+      "numeric_values_on_target_source_timestamps": 137160,
+      "target_source_rows": 137249,
+      "missingness_on_target_source_timestamps_pct": 0.06484564550561389,
+      "numeric_values_on_target_expected_grid": 137160,
+      "target_expected_grid_timestamps": 139852,
+      "missingness_on_target_expected_grid_pct": 1.9248920287160711,
+      "note": "Timestamp-label exact match; no timezone conversion or imputation.",
+      "feature_quality_status": "Flagged in prior April audit for a 90\u2013120-minute constant-value run; not cleared as a valid feature."
+    },
+    {
+      "name": "Module temperature pad 2 sensor 2",
+      "feature": "thermocouple_pad_2_back-of-module_temperature_2_(c)_o_149731",
+      "source": "environment object",
+      "status": "present",
+      "source_rows": 137249,
+      "timestamp_parse_failures": 0,
+      "numeric_observations": 135867,
+      "source_null_values": 1382,
+      "source_missingness_pct": 1.0069290122332402,
+      "first_numeric_timestamp": "2024-01-01T00:05:00",
+      "last_numeric_timestamp": "2025-04-30T14:15:00",
+      "source_unique_timestamps": 137249,
+      "source_duplicate_timestamps": 0,
+      "source_5m_adjacent_deltas": 137227,
+      "source_non5m_adjacent_deltas": 21,
+      "numeric_values_on_target_source_timestamps": 135867,
+      "target_source_rows": 137249,
+      "missingness_on_target_source_timestamps_pct": 1.0069290122332402,
+      "numeric_values_on_target_expected_grid": 135867,
+      "target_expected_grid_timestamps": 139852,
+      "missingness_on_target_expected_grid_pct": 2.84944083745674,
+      "note": "Timestamp-label exact match; no timezone conversion or imputation.",
+      "feature_quality_status": "Flagged in prior April audit for a 90\u2013120-minute constant-value run; not cleared as a valid feature."
+    },
+    {
+      "name": "Module temperature pad 2 sensor 1 (flagged failed)",
+      "feature": "thermocouple_pad_2_back-of-module_temperature_1_(c)_o_149730",
+      "source": "environment object",
+      "status": "present",
+      "source_rows": 137249,
+      "timestamp_parse_failures": 0,
+      "numeric_observations": 135873,
+      "source_null_values": 1376,
+      "source_missingness_pct": 1.0025573956823,
+      "first_numeric_timestamp": "2024-01-01T00:05:00",
+      "last_numeric_timestamp": "2025-04-30T14:15:00",
+      "source_unique_timestamps": 137249,
+      "source_duplicate_timestamps": 0,
+      "source_5m_adjacent_deltas": 137227,
+      "source_non5m_adjacent_deltas": 21,
+      "numeric_values_on_target_source_timestamps": 135873,
+      "target_source_rows": 137249,
+      "missingness_on_target_source_timestamps_pct": 1.0025573956823,
+      "numeric_values_on_target_expected_grid": 135873,
+      "target_expected_grid_timestamps": 139852,
+      "missingness_on_target_expected_grid_pct": 2.845150587764208,
+      "note": "Timestamp-label exact match; no timezone conversion or imputation.",
+      "feature_quality_status": "Prior April audit found constant 3276.7 C for all observed timestamps; failed/unusable, exclude pending separate evidence."
+    },
+    {
+      "name": "Revenue-meter AC power (boundary/sign unresolved)",
+      "feature": "meter_ac_power_(kw)_meter_150150",
+      "source": "meter object",
+      "status": "present",
+      "source_rows": 123872,
+      "timestamp_parse_failures": 0,
+      "numeric_observations": 123872,
+      "source_null_values": 0,
+      "source_missingness_pct": 0.0,
+      "first_numeric_timestamp": "2024-01-01T00:05:00",
+      "last_numeric_timestamp": "2025-04-30T14:20:00",
+      "source_unique_timestamps": 123872,
+      "source_duplicate_timestamps": 0,
+      "source_5m_adjacent_deltas": 123821,
+      "source_non5m_adjacent_deltas": 50,
+      "numeric_values_on_target_source_timestamps": 123795,
+      "target_source_rows": 137249,
+      "missingness_on_target_source_timestamps_pct": 9.802621512725047,
+      "numeric_values_on_target_expected_grid": 123872,
+      "target_expected_grid_timestamps": 139852,
+      "missingness_on_target_expected_grid_pct": 11.42636501444384,
+      "note": "Timestamp-label exact match; no timezone conversion or imputation.",
+      "feature_quality_status": "Revenue-meter boundary and sign semantics remain unresolved; availability only, not a cleared model feature."
+    },
+    {
+      "name": "Wind sensor channel",
+      "feature": "wind_sensor_max_wind_speed_(m/s)_o_149732",
+      "source": "environment object",
+      "status": "listed in System metadata but absent from approved environment CSV",
+      "source_rows": 0,
+      "numeric_observations": 0,
+      "source_missingness_pct": null,
+      "first_numeric_timestamp": null,
+      "last_numeric_timestamp": null,
+      "cadence": "unavailable",
+      "target_timestamp_overlap_numeric": 0,
+      "target_overlap_missing_pct": 100.0,
+      "feature_quality_status": "Unavailable in the approved source object."
+    },
+    {
+      "name": "Wind sensor channel",
+      "feature": "wind_sensor_wind_direction_o_149733",
+      "source": "environment object",
+      "status": "listed in System metadata but absent from approved environment CSV",
+      "source_rows": 0,
+      "numeric_observations": 0,
+      "source_missingness_pct": null,
+      "first_numeric_timestamp": null,
+      "last_numeric_timestamp": null,
+      "cadence": "unavailable",
+      "target_timestamp_overlap_numeric": 0,
+      "target_overlap_missing_pct": 100.0,
+      "feature_quality_status": "Unavailable in the approved source object."
+    },
+    {
+      "name": "Wind sensor channel",
+      "feature": "wind_sensor_wind_direction_compass_corr_o_149734",
+      "source": "environment object",
+      "status": "listed in System metadata but absent from approved environment CSV",
+      "source_rows": 0,
+      "numeric_observations": 0,
+      "source_missingness_pct": null,
+      "first_numeric_timestamp": null,
+      "last_numeric_timestamp": null,
+      "cadence": "unavailable",
+      "target_timestamp_overlap_numeric": 0,
+      "target_overlap_missing_pct": 100.0,
+      "feature_quality_status": "Unavailable in the approved source object."
+    },
+    {
+      "name": "Wind sensor channel",
+      "feature": "wind_sensor_wind_direction_fast_o_149735",
+      "source": "environment object",
+      "status": "listed in System metadata but absent from approved environment CSV",
+      "source_rows": 0,
+      "numeric_observations": 0,
+      "source_missingness_pct": null,
+      "first_numeric_timestamp": null,
+      "last_numeric_timestamp": null,
+      "cadence": "unavailable",
+      "target_timestamp_overlap_numeric": 0,
+      "target_overlap_missing_pct": 100.0,
+      "feature_quality_status": "Unavailable in the approved source object."
+    },
+    {
+      "name": "Wind sensor channel",
+      "feature": "wind_sensor_wind_speed_(m/s)_o_149736",
+      "source": "environment object",
+      "status": "listed in System metadata but absent from approved environment CSV",
+      "source_rows": 0,
+      "numeric_observations": 0,
+      "source_missingness_pct": null,
+      "first_numeric_timestamp": null,
+      "last_numeric_timestamp": null,
+      "cadence": "unavailable",
+      "target_timestamp_overlap_numeric": 0,
+      "target_overlap_missing_pct": 100.0,
+      "feature_quality_status": "Unavailable in the approved source object."
+    },
+    {
+      "name": "Wind sensor channel",
+      "feature": "wind_sensor_wind_speed_fast_(m/s)_o_149737",
+      "source": "environment object",
+      "status": "listed in System metadata but absent from approved environment CSV",
+      "source_rows": 0,
+      "numeric_observations": 0,
+      "source_missingness_pct": null,
+      "first_numeric_timestamp": null,
+      "last_numeric_timestamp": null,
+      "cadence": "unavailable",
+      "target_timestamp_overlap_numeric": 0,
+      "target_overlap_missing_pct": 100.0,
+      "feature_quality_status": "Unavailable in the approved source object."
+    },
+    {
+      "name": "Wind sensor channel",
+      "feature": "wind_sensor_wind_speed_std._dev._(m/s)_o_149738",
+      "source": "environment object",
+      "status": "listed in System metadata but absent from approved environment CSV",
+      "source_rows": 0,
+      "numeric_observations": 0,
+      "source_missingness_pct": null,
+      "first_numeric_timestamp": null,
+      "last_numeric_timestamp": null,
+      "cadence": "unavailable",
+      "target_timestamp_overlap_numeric": 0,
+      "target_overlap_missing_pct": 100.0,
+      "feature_quality_status": "Unavailable in the approved source object."
+    }
+  ],
+  "legacy_feature_coverage": {
+    "period": "legacy 2017-08-23 through 2023-11-16",
+    "weather_or_irradiance_objects_available": false,
+    "note": "Legacy AC file includes meter and power-factor columns, but no irradiance/environment time-series object was acquired; weather-feature coverage is not present in the legacy history."
+  },
+  "feature_quality_notes": {
+    "previous_pilot_quality_flags": {
+      "meter_ac_power_(kw)_meter_150150": [
+        {
+          "flag": "negative_revenue_meter_power",
+          "count": 4074,
+          "interpretation": "Preserved; may represent bidirectional/net meter flow or auxiliary consumption, and must be confirmed before treating as gross PV generation."
+        },
+        {
+          "flag": "constant_reading_run_at_least_60_minutes",
+          "longest_consecutive_same_value_intervals": 153,
+          "longest_constant_duration_minutes": 760,
+          "longest_constant_value": -13.0,
+          "longest_constant_run_start": "2025-04-03T18:40:00",
+          "longest_constant_run_end": "2025-04-04T07:20:00",
+          "constant_run_at_least_60_minutes": true,
+          "interpretation": "Flag for stale-sensor review; a stable signal alone is not proof of sensor failure."
+        }
+      ],
+      "pyranometer_(class_a)_pad_1_poa_irradiance_(w/m2)_o_149723": [
+        {
+          "flag": "negative_irradiance_zero_offset_candidate",
+          "count": 3736,
+          "interpretation": "Small negative values are retained as recorded; likely require dark-offset/measurement review."
+        },
+        {
+          "flag": "constant_reading_run_at_least_60_minutes",
+          "longest_consecutive_same_value_intervals": 37,
+          "longest_constant_duration_minutes": 180,
+          "longest_constant_value": 659.2,
+          "longest_constant_run_start": "2025-04-27T15:30:00",
+          "longest_constant_run_end": "2025-04-27T18:30:00",
+          "constant_run_at_least_60_minutes": true,
+          "interpretation": "Flag for stale-sensor review; a stable signal alone is not proof of sensor failure."
+        }
+      ],
+      "pyranometer_(class_a)_pad_1_poa_irradiance_temp_compensated_(w/m2)_o_149724": [
+        {
+          "flag": "negative_irradiance_zero_offset_candidate",
+          "count": 3736,
+          "interpretation": "Small negative values are retained as recorded; likely require dark-offset/measurement review."
+        },
+        {
+          "flag": "constant_reading_run_at_least_60_minutes",
+          "longest_consecutive_same_value_intervals": 37,
+          "longest_constant_duration_minutes": 180,
+          "longest_constant_value": 661.46,
+          "longest_constant_run_start": "2025-04-27T15:30:00",
+          "longest_constant_run_end": "2025-04-27T18:30:00",
+          "constant_run_at_least_60_minutes": true,
+          "interpretation": "Flag for stale-sensor review; a stable signal alone is not proof of sensor failure."
+        }
+      ],
+      "pyranometer_(class_a)_pad_2_poa_irradiance_(w/m2)_o_149725": [
+        {
+          "flag": "negative_irradiance_zero_offset_candidate",
+          "count": 3733,
+          "interpretation": "Small negative values are retained as recorded; likely require dark-offset/measurement review."
+        }
+      ],
+      "pyranometer_(class_a)_pad_2_poa_irradiance_temp_compensated_(w/m2)_o_149726": [
+        {
+          "flag": "negative_irradiance_zero_offset_candidate",
+          "count": 3733,
+          "interpretation": "Small negative values are retained as recorded; likely require dark-offset/measurement review."
+        }
+      ],
+      "weather_station_ambient_temperature_(c)_o_149727": [
+        {
+          "flag": "constant_reading_run_at_least_60_minutes",
+          "longest_consecutive_same_value_intervals": 26,
+          "longest_constant_duration_minutes": 125,
+          "longest_constant_value": 0.9,
+          "longest_constant_run_start": "2025-04-04T01:20:00",
+          "longest_constant_run_end": "2025-04-04T03:25:00",
+          "constant_run_at_least_60_minutes": true,
+          "interpretation": "Flag for stale-sensor review; a stable signal alone is not proof of sensor failure."
+        }
+      ],
+      "thermocouple_pad_1_back-of-module_temperature_1_(c)_o_149728": [
+        {
+          "flag": "constant_reading_run_at_least_60_minutes",
+          "longest_consecutive_same_value_intervals": 24,
+          "longest_constant_duration_minutes": 115,
+          "longest_constant_value": 5.7,
+          "longest_constant_run_start": "2025-04-26T00:05:00",
+          "longest_constant_run_end": "2025-04-26T02:00:00",
+          "constant_run_at_least_60_minutes": true,
+          "interpretation": "Flag for stale-sensor review; a stable signal alone is not proof of sensor failure."
+        }
+      ],
+      "thermocouple_pad_1_back-of-module_temperature_2_(c)_o_149729": [
+        {
+          "flag": "constant_reading_run_at_least_60_minutes",
+          "longest_consecutive_same_value_intervals": 19,
+          "longest_constant_duration_minutes": 90,
+          "longest_constant_value": 1.8,
+          "longest_constant_run_start": "2025-04-14T04:15:00",
+          "longest_constant_run_end": "2025-04-14T05:45:00",
+          "constant_run_at_least_60_minutes": true,
+          "interpretation": "Flag for stale-sensor review; a stable signal alone is not proof of sensor failure."
+        }
+      ],
+      "thermocouple_pad_2_back-of-module_temperature_1_(c)_o_149730": [
+        {
+          "flag": "temperature_outside_minus50_to_100_c",
+          "count": 8524,
+          "interpretation": "Sensor value retained; readings outside this broad physical review range should not be treated as valid without investigation."
+        },
+        {
+          "flag": "constant_reading_run_at_least_60_minutes",
+          "longest_consecutive_same_value_intervals": 8524,
+          "longest_constant_duration_minutes": 42615,
+          "longest_constant_value": 3276.7,
+          "longest_constant_run_start": "2025-04-01T00:00:00",
+          "longest_constant_run_end": "2025-04-30T14:15:00",
+          "constant_run_at_least_60_minutes": true,
+          "interpretation": "Flag for stale-sensor review; a stable signal alone is not proof of sensor failure."
+        }
+      ],
+      "thermocouple_pad_2_back-of-module_temperature_2_(c)_o_149731": [
+        {
+          "flag": "constant_reading_run_at_least_60_minutes",
+          "longest_consecutive_same_value_intervals": 25,
+          "longest_constant_duration_minutes": 120,
+          "longest_constant_value": 5.5,
+          "longest_constant_run_start": "2025-04-26T00:05:00",
+          "longest_constant_run_end": "2025-04-26T02:05:00",
+          "constant_run_at_least_60_minutes": true,
+          "interpretation": "Flag for stale-sensor review; a stable signal alone is not proof of sensor failure."
+        }
+      ]
+    },
+    "wind_metadata_channels_absent_from_environment_object": [
+      "wind_sensor_max_wind_speed_(m/s)_o_149732",
+      "wind_sensor_wind_direction_o_149733",
+      "wind_sensor_wind_direction_compass_corr_o_149734",
+      "wind_sensor_wind_direction_fast_o_149735",
+      "wind_sensor_wind_speed_(m/s)_o_149736",
+      "wind_sensor_wind_speed_fast_(m/s)_o_149737",
+      "wind_sensor_wind_speed_std._dev._(m/s)_o_149738"
+    ],
+    "no_humidity_or_cloud_channels_in_environment_header": true,
+    "poa_context": "April review flagged pad-1 channel constant for 180 minutes; current readings may be affected by array shading/tracker-stall representativeness concerns. Pad-2 raw POA had no >60-minute constant run in April but remains subject to POA-location/shading limitations.",
+    "module_temperature_149730": "April pilot value was 3276.7 C, constant for the full observed April span; exclude as failed/unusable pending separate evidence.",
+    "ambient_and_other_module_temperature": "Prior pilot review flags long constant runs for ambient and the other usable thermocouples; availability is reported but channels are not cleared as valid model inputs by this audit."
+  },
+  "chronological_evaluation_recommendations": {
+    "strategy_A_target_only": "Use the legacy and increment as separate time blocks; reserve later contiguous segments for validation/test, do not join across the 45d+ gap, and use only target histories known by issue time. Legacy data allows longer history but has no acquired weather time series.",
+    "strategy_B_weather_informed": "Restrict to increment dates with exact timestamp overlap between target and approved weather inputs. Use only observed covariates at or before issue time; never use future observed weather. Segment gaps and use chronological train/validation/test blocks within the increment. Weather overlap is only about 16 months and contains internal data gaps.",
+    "split_dates": "Not selected; derive after a reviewed segment inventory and sample counts; no random split."
+  },
+  "readiness_assessment": {
+    "target_available": "yes with notable missingness",
+    "long_contiguous_segments": "yes, but interrupted by channel null runs and timestamp gaps",
+    "historical_gap": "quantified and must remain explicit",
+    "weather_overlap": "available in increment only; sensor quality remains conditional",
+    "leakage_safe_chronological_test": "feasible in principle inside the increment, with lower sample count after feature availability and segment rules",
+    "decision": "B - partially ready; explicitly account for coverage and feature-quality issues before EDA/baseline development."
+  }
+}

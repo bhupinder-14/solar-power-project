@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Data (raw data files can be large)
+ml/data/raw/*.csv
+ml/data/raw/*.zip
+ml/data/raw/*.json
+
+# Model artifacts (large binary files)
+ml/artifacts/models/*.joblib
+ml/artifacts/models/*.pkl
+ml/artifacts/pipelines/*.joblib
+ml/artifacts/pipelines/*.pkl
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment
+.env
+*.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+*.log
+
+# Test
+.pytest_cache/
+htmlcov/
+.coverage
+
+# Node
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/build/

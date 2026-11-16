@@ -1,0 +1,6 @@
+{
+  "method": "statsmodels PACF on each period longest uninterrupted segment, capped at 24 hours of lags",
+  "available": false,
+  "periods": {},
+  "error": "ModuleNotFoundError: No module named 'statsmodels'"
+}

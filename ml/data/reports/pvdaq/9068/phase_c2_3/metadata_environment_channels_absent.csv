@@ -1,0 +1,8 @@
+metric_id,metadata_key,sensor_name,common_name,units,aggregation_type,source_type,source_id,reason
+149732,wind_sensor_max_wind_speed_(m/s)_o_149732,Wind Sensor_MAX WIND SPEED (m/s),Wind speed,m/s,avg,OTHER,,listed in System metadata but absent from the approved irradiance/environment source headers
+149733,wind_sensor_wind_direction_o_149733,Wind Sensor_WIND DIRECTION,Wind direction,degree,avg,OTHER,,listed in System metadata but absent from the approved irradiance/environment source headers
+149734,wind_sensor_wind_direction_compass_corr_o_149734,Wind Sensor_WIND DIRECTION COMPASS CORR,Wind direction,degree,avg,OTHER,,listed in System metadata but absent from the approved irradiance/environment source headers
+149735,wind_sensor_wind_direction_fast_o_149735,Wind Sensor_WIND DIRECTION FAST,Wind direction,degree,avg,OTHER,,listed in System metadata but absent from the approved irradiance/environment source headers
+149736,wind_sensor_wind_speed_(m/s)_o_149736,Wind Sensor_WIND SPEED (m/s),Wind speed,m/s,avg,OTHER,,listed in System metadata but absent from the approved irradiance/environment source headers
+149737,wind_sensor_wind_speed_fast_(m/s)_o_149737,Wind Sensor_WIND SPEED FAST (m/s),Wind speed,m/s,avg,OTHER,,listed in System metadata but absent from the approved irradiance/environment source headers
+149738,wind_sensor_wind_speed_std._dev._(m/s)_o_149738,Wind Sensor_WIND SPEED STD. DEV. (m/s),Wind speed,m/s,avg,OTHER,,listed in System metadata but absent from the approved irradiance/environment source headers

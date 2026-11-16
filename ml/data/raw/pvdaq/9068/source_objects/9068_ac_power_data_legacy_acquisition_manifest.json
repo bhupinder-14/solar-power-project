@@ -1,0 +1,28 @@
+{
+  "source": "Official OEDI PVDAQ 2023 Solar Data Prize, System 9068 legacy AC-power object",
+  "system_id": 9068,
+  "object_name": "9068_ac_power_data.csv",
+  "source_url": "https://oedi-data-lake.s3.amazonaws.com/pvdaq/2023-solar-data-prize/9068_OEDI/data/9068_ac_power_data.csv",
+  "retrieval_started_utc": "2026-11-09T08:51:47.7729946+00:00",
+  "pre_download_head": {
+    "http_status": 200,
+    "content_length_bytes": 65002925,
+    "etag": "\"63ab983741d1a8c2a4e275948179fb65-4\"",
+    "last_modified": "Tue, 02 Jan 2024 17:12:56 GMT",
+    "content_type": "application/vnd.ms-excel",
+    "s3_metadata_sha256": "d0f7381abfaad9f53ae74fca7c6761aecbc344e595faf316406c3b081f0d1548",
+    "version_id": "rVLH1pbJwr6I3eHJpf.sx1HZUcvPT.aF"
+  },
+  "download_http_status": 200,
+  "remote_content_length_bytes": 65002925,
+  "local_file_size_bytes": 65002925,
+  "sha256": "d0f7381abfaad9f53ae74fca7c6761aecbc344e595faf316406c3b081f0d1548",
+  "sha256_matches_s3_metadata": true,
+  "size_matches_preflight": true,
+  "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "dataset_doi": "https://doi.org/10.25984/1846021",
+  "attribution": "Deline, C., Perry, K., Deceglie, M., Muller, M., Sekulic, W., & Jordan, D. (2021). Photovoltaic Data Acquisition (PVDAQ) Public Datasets. Open Energy Data Initiative (OEDI), NREL. https://doi.org/10.25984/1846021",
+  "authorization": "User-approved single legacy source object for Phase C2.1.",
+  "preservation": "Original CSV bytes preserved; audit used read-only input access."
+}

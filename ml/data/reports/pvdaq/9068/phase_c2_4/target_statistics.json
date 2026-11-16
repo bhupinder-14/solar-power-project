@@ -1,0 +1,97 @@
+{
+  "target": "inverter 1 AC kW + inverter 2 AC kW; only when both numeric",
+  "periods": {
+    "legacy": {
+      "source_rows": 655434,
+      "first_timestamp": "2017-08-23T18:15:00",
+      "last_timestamp": "2023-11-16T13:40:00",
+      "paired_target_count": 613497,
+      "target_missing_existing_rows": 41937,
+      "target_missing_pct_existing_rows": 6.3983558985344064,
+      "target_calc_check_max_abs_diff_kw": 0.0
+    },
+    "increment": {
+      "source_rows": 137249,
+      "first_timestamp": "2024-01-01T00:05:00",
+      "last_timestamp": "2025-04-30T14:20:00",
+      "paired_target_count": 135791,
+      "target_missing_existing_rows": 1458,
+      "target_missing_pct_existing_rows": 1.0623028218784838,
+      "target_calc_check_max_abs_diff_kw": 0.0
+    }
+  },
+  "statistics": {
+    "legacy": {
+      "count": 613497,
+      "mean_kw": 965.1132499425426,
+      "median_kw": 0.0,
+      "std_kw_sample": 1355.3401202569507,
+      "min_kw": -81.0,
+      "max_kw": 3791.0,
+      "percentiles_kw": {
+        "0.01": -29.0,
+        "0.05": 0.0,
+        "0.25": 0.0,
+        "0.75": 2035.0,
+        "0.95": 3640.0,
+        "0.99": 3680.0
+      },
+      "negative_count": 21775,
+      "negative_pct": 3.5493246095742927,
+      "zero_count": 301604,
+      "zero_pct": 49.16144659224088,
+      "positive_count": 290118,
+      "positive_pct": 47.28922879818484,
+      "near_zero_abs_le_10_kw_count": 310195,
+      "near_zero_abs_le_10_kw_pct": 50.561779438204255
+    },
+    "increment": {
+      "count": 135791,
+      "mean_kw": 894.5112857258581,
+      "median_kw": 0.0,
+      "std_kw_sample": 1274.4061952072464,
+      "min_kw": -50.0,
+      "max_kw": 3798.0,
+      "percentiles_kw": {
+        "0.01": -4.0,
+        "0.05": 0.0,
+        "0.25": 0.0,
+        "0.75": 1851.0,
+        "0.95": 3478.5,
+        "0.99": 3768.0
+      },
+      "negative_count": 1561,
+      "negative_pct": 1.1495607219918846,
+      "zero_count": 71599,
+      "zero_pct": 52.7273530646361,
+      "positive_count": 62631,
+      "positive_pct": 46.12308621337202,
+      "near_zero_abs_le_10_kw_count": 72756,
+      "near_zero_abs_le_10_kw_pct": 53.579397750955515
+    },
+    "available_periods_combined_unstitched": {
+      "count": 749288,
+      "mean_kw": 952.3182881615613,
+      "median_kw": 0.0,
+      "std_kw_sample": 1341.3100870364615,
+      "min_kw": -81.0,
+      "max_kw": 3798.0,
+      "percentiles_kw": {
+        "0.01": -27.0,
+        "0.05": 0.0,
+        "0.25": 0.0,
+        "0.75": 1995.0,
+        "0.95": 3632.0,
+        "0.99": 3683.0
+      },
+      "negative_count": 23336,
+      "negative_pct": 3.1144232925123583,
+      "zero_count": 373203,
+      "zero_pct": 49.8076840947673,
+      "positive_count": 352749,
+      "positive_pct": 47.07789261272034,
+      "near_zero_abs_le_10_kw_count": 382951,
+      "near_zero_abs_le_10_kw_pct": 51.10865248075507
+    }
+  }
+}

@@ -1,0 +1,254 @@
+{
+  "scope": "April 2025 pilot only; no historical time-series objects downloaded.",
+  "source_object": "9068_ac_power_data_20240101_20250430.csv",
+  "source_url": "https://oedi-data-lake.s3.amazonaws.com/pvdaq/2023-solar-data-prize/9068_OEDI/data/9068_ac_power_data_20240101_20250430.csv",
+  "local_size_bytes": 10870311,
+  "sha256_verified": "16cac9d3ec61027e6f176eea276dafd1ad6d46461336edb29a3772ad34b5efc2",
+  "april_source_rows": 8525,
+  "first_timestamp": "2025-04-01 00:00:00",
+  "last_timestamp": "2025-04-30 14:20:00",
+  "expected_five_minute_slots": 8640,
+  "timestamps_absent_in_april": 115,
+  "duplicate_timestamps": 0,
+  "off_grid_rows": 0,
+  "per_channel": {
+    "inverter_1_ac_power_(kw)_inv_150143": {
+      "source_rows_april": 8525,
+      "numeric_observations": 8522,
+      "blank_or_non_numeric_source_rows": 3,
+      "missing_pct_of_full_8640_grid": 1.3657407407407407,
+      "first_valid_timestamp": "2025-04-01 00:00:00",
+      "last_valid_timestamp": "2025-04-30 14:20:00",
+      "negative_count": 93,
+      "zero_count": 4076,
+      "min_kw": -24.0,
+      "max_kw": 1698.0,
+      "mean_kw": 534.8710396620512,
+      "median_kw": 26.0,
+      "duplicate_timestamps": 0,
+      "timestamp_step_counts": {
+        "0 days 00:05:00": 8524
+      },
+      "over_1910_kw_count": 0,
+      "constant_runs_count": 4261,
+      "constant_runs_at_least_60min": 32,
+      "nonzero_constant_runs_at_least_60min": 1,
+      "longest_constant_runs": [
+        {
+          "records": 159,
+          "value_kw": 0.0,
+          "start": "2025-04-13 17:35:00",
+          "end": "2025-04-14 06:45:00"
+        },
+        {
+          "records": 154,
+          "value_kw": 0.0,
+          "start": "2025-04-03 18:35:00",
+          "end": "2025-04-04 07:20:00"
+        },
+        {
+          "records": 149,
+          "value_kw": 0.0,
+          "start": "2025-04-17 18:35:00",
+          "end": "2025-04-18 06:55:00"
+        },
+        {
+          "records": 148,
+          "value_kw": 0.0,
+          "start": "2025-04-04 18:35:00",
+          "end": "2025-04-05 06:50:00"
+        },
+        {
+          "records": 148,
+          "value_kw": 0.0,
+          "start": "2025-04-25 18:15:00",
+          "end": "2025-04-26 06:30:00"
+        }
+      ]
+    },
+    "inverter_2_ac_power_(kw)_inv_150144": {
+      "source_rows_april": 8525,
+      "numeric_observations": 8525,
+      "blank_or_non_numeric_source_rows": 0,
+      "missing_pct_of_full_8640_grid": 1.3310185185185186,
+      "first_valid_timestamp": "2025-04-01 00:00:00",
+      "last_valid_timestamp": "2025-04-30 14:20:00",
+      "negative_count": 78,
+      "zero_count": 4110,
+      "min_kw": -22.0,
+      "max_kw": 1898.0,
+      "mean_kw": 517.6957184750734,
+      "median_kw": 21.0,
+      "duplicate_timestamps": 0,
+      "timestamp_step_counts": {
+        "0 days 00:05:00": 8524
+      },
+      "over_1910_kw_count": 0,
+      "constant_runs_count": 4277,
+      "constant_runs_at_least_60min": 32,
+      "nonzero_constant_runs_at_least_60min": 0,
+      "longest_constant_runs": [
+        {
+          "records": 160,
+          "value_kw": 0.0,
+          "start": "2025-04-13 17:30:00",
+          "end": "2025-04-14 06:45:00"
+        },
+        {
+          "records": 155,
+          "value_kw": 0.0,
+          "start": "2025-04-03 18:35:00",
+          "end": "2025-04-04 07:25:00"
+        },
+        {
+          "records": 150,
+          "value_kw": 0.0,
+          "start": "2025-04-17 18:35:00",
+          "end": "2025-04-18 07:00:00"
+        },
+        {
+          "records": 149,
+          "value_kw": 0.0,
+          "start": "2025-04-04 18:30:00",
+          "end": "2025-04-05 06:50:00"
+        },
+        {
+          "records": 147,
+          "value_kw": 0.0,
+          "start": "2025-04-25 18:15:00",
+          "end": "2025-04-26 06:25:00"
+        }
+      ]
+    }
+  },
+  "combined_sum": {
+    "valid_pairs": 8522,
+    "missing_pairs": 3,
+    "min_kw": -35.0,
+    "max_kw": 3513.0,
+    "mean_kw": 1052.1690917624971,
+    "median_kw": 47.0,
+    "p01_kw": -6.0,
+    "p10_kw": 0.0,
+    "p90_kw": 3223.0,
+    "p99_kw": 3254.0,
+    "negative_count": 117,
+    "zero_count": 4058,
+    "negative_at_poa_gt_50": 11,
+    "negative_at_poa_gt_200": 0,
+    "negative_at_poa_le_50": 106,
+    "zero_at_poa_gt_50": 1,
+    "above_two_inverter_nameplate_3820_kw": 0
+  },
+  "weather_correlations_pearson": {
+    "inverter_1_ac_power_(kw)_inv_150143": {
+      "pyranometer_(class_a)_pad_2_poa_irradiance_(w/m2)_o_149725": 0.9818862785065554,
+      "weather_station_ambient_temperature_(c)_o_149727": 0.5250315802369777,
+      "thermocouple_pad_1_back-of-module_temperature_1_(c)_o_149728": 0.9007916568964993
+    },
+    "inverter_2_ac_power_(kw)_inv_150144": {
+      "pyranometer_(class_a)_pad_2_poa_irradiance_(w/m2)_o_149725": 0.9881373837508267,
+      "weather_station_ambient_temperature_(c)_o_149727": 0.5220562764401757,
+      "thermocouple_pad_1_back-of-module_temperature_1_(c)_o_149728": 0.8999811252718906
+    },
+    "total": {
+      "pyranometer_(class_a)_pad_2_poa_irradiance_(w/m2)_o_149725": 0.9867320992575604,
+      "weather_station_ambient_temperature_(c)_o_149727": 0.5247019669071075,
+      "thermocouple_pad_1_back-of-module_temperature_1_(c)_o_149728": 0.9019876084212839
+    }
+  },
+  "revenue_meter_comparison": {
+    "all": {
+      "n": 8522,
+      "correlation_i1_i2": 0.9929209043770492,
+      "correlation_i1_meter": 0.9897435128070257,
+      "correlation_i2_meter": 0.986796827077928,
+      "correlation_sum_meter": 0.9900351540650257,
+      "mean_sum_kw": 1052.1690917624971,
+      "mean_meter_kw": 1109.8076742548697,
+      "mean_sum_minus_meter_kw": -57.638582492372684,
+      "median_difference_kw": 9.0,
+      "min_difference_kw": -2247.0,
+      "max_difference_kw": 2760.0,
+      "abs_difference_over_500_kw": 243,
+      "abs_difference_over_1000_kw": 47
+    },
+    "poa_gt_50": {
+      "n": 4159,
+      "correlation_i1_i2": 0.9810244459742088,
+      "correlation_i1_meter": 0.9702973396901499,
+      "correlation_i2_meter": 0.9648780255852618,
+      "correlation_sum_meter": 0.9721889932405835,
+      "mean_sum_kw": 2152.477999519115,
+      "mean_meter_kw": 2280.9761962010098,
+      "mean_sum_minus_meter_kw": -128.49819668189468,
+      "median_difference_kw": -115.0,
+      "min_difference_kw": -2247.0,
+      "max_difference_kw": 2760.0,
+      "abs_difference_over_500_kw": 243,
+      "abs_difference_over_1000_kw": 47
+    },
+    "poa_gt_200": {
+      "n": 3497,
+      "correlation_i1_i2": 0.9667885266970064,
+      "correlation_i1_meter": 0.9454516778540762,
+      "correlation_i2_meter": 0.9387671361101981,
+      "correlation_sum_meter": 0.9499603384133483,
+      "mean_sum_kw": 2483.553903345725,
+      "mean_meter_kw": 2619.019445238776,
+      "mean_sum_minus_meter_kw": -135.46554189305118,
+      "median_difference_kw": -127.0,
+      "min_difference_kw": -2247.0,
+      "max_difference_kw": 2760.0,
+      "abs_difference_over_500_kw": 239,
+      "abs_difference_over_1000_kw": 46
+    },
+    "poa_le_50": {
+      "n": 4362,
+      "correlation_i1_i2": 0.9477115952488743,
+      "correlation_i1_meter": 0.8676507584902925,
+      "correlation_i2_meter": 0.8497530216423531,
+      "correlation_sum_meter": 0.8708205384698993,
+      "mean_sum_kw": 2.5708390646492436,
+      "mean_meter_kw": -7.3610729023383765,
+      "mean_sum_minus_meter_kw": 9.93191196698762,
+      "median_difference_kw": 13.0,
+      "min_difference_kw": -445.0,
+      "max_difference_kw": 65.0,
+      "abs_difference_over_500_kw": 0,
+      "abs_difference_over_1000_kw": 0
+    }
+  },
+  "large_difference_examples": [
+    {
+      "timestamp_source": "2025-04-06 08:25:00",
+      "inverter_1_kw": 1637.0,
+      "inverter_2_kw": 1592.0,
+      "sum_kw": 3229.0,
+      "meter_kw": 469.0,
+      "poa_pad2_w_m2": 505.81
+    },
+    {
+      "timestamp_source": "2025-04-21 16:35:00",
+      "inverter_1_kw": 637.0,
+      "inverter_2_kw": 395.0,
+      "sum_kw": 1032.0,
+      "meter_kw": 3279.0,
+      "poa_pad2_w_m2": 221.54
+    },
+    {
+      "timestamp_source": "2025-04-21 16:30:00",
+      "inverter_1_kw": 1616.0,
+      "inverter_2_kw": 1617.0,
+      "sum_kw": 3233.0,
+      "meter_kw": 3245.0,
+      "poa_pad2_w_m2": 1125.79
+    }
+  ],
+  "interpretation": [
+    "Both channels are recorded independently as separate inverter AC-power metrics and co-vary strongly; summation is a candidate, not independently certified gross plant output.",
+    "Negative values retained; low-irradiance subsets are a proxy, not confirmed night classification.",
+    "Large meter-to-inverter divergences occur despite same timestamp labels; attribution to meter boundary, faults, curtailment, or transient issue is unresolved.",
+    "Timezone-naive source timestamps remain unverified."
+  ]
+}

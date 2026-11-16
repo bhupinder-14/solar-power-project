@@ -1,0 +1,21 @@
+{
+  "latest_observed_interval_start": "2025-04-01T00:00:00",
+  "latest_observed_interval_close_issue_time": "2025-04-01T00:05:00",
+  "target_interval_start_issue_plus_15m": "2025-04-01T00:20:00",
+  "target_interval_end": "2025-04-01T00:25:00",
+  "input_timestamp_not_after_issue": true,
+  "target_timestamp_matches_issue_plus_15m": true,
+  "target_power_at_latest_interval_kw": -13.0,
+  "future_target_power_kw_for_verification_only": -13.0,
+  "input_features": {
+    "pyranometer_(class_a)_pad_1_poa_irradiance_(w/m2)_o_149723": -1.8,
+    "pyranometer_(class_a)_pad_1_poa_irradiance_temp_compensated_(w/m2)_o_149724": -1.82,
+    "pyranometer_(class_a)_pad_2_poa_irradiance_(w/m2)_o_149725": -1.8,
+    "pyranometer_(class_a)_pad_2_poa_irradiance_temp_compensated_(w/m2)_o_149726": -1.81,
+    "weather_station_ambient_temperature_(c)_o_149727": 3.5,
+    "thermocouple_pad_1_back-of-module_temperature_1_(c)_o_149728": -0.2,
+    "thermocouple_pad_1_back-of-module_temperature_2_(c)_o_149729": -0.1,
+    "thermocouple_pad_2_back-of-module_temperature_1_(c)_o_149730": 3276.7,
+    "thermocouple_pad_2_back-of-module_temperature_2_(c)_o_149731": 0.0
+  }
+}

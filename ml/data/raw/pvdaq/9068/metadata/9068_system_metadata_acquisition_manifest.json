@@ -1,0 +1,32 @@
+{
+  "source": "Official OEDI PVDAQ 2023 Solar Data Prize System 9068 metadata",
+  "system_id": 9068,
+  "object_name": "9068_system_metadata.json",
+  "source_url": "https://oedi-data-lake.s3.amazonaws.com/pvdaq/2023-solar-data-prize/9068_OEDI/metadata/9068_system_metadata.json",
+  "retrieval_started_utc": "2026-11-09T08:41:47.791850+00:00",
+  "retrieval_validated_utc": "2026-11-09T08:42:20+00:00",
+  "head_http_status": 200,
+  "get_http_status": 200,
+  "content_type": "application/octet-stream (generic S3 content type; payload validated as JSON)",
+  "remote_content_length_bytes": 186092,
+  "local_file_size_bytes": 186092,
+  "last_modified": "Tue, 09 Jan 2024 16:13:17 GMT",
+  "etag": "\"9063b8eae5788fc407613a13abd71479\"",
+  "sha256": "6861ae58145427dd790315257feef95b6ed5067fe5b5378dc5b2fa4acc23937f",
+  "payload_validation": {
+    "json_parse": "passed",
+    "system_id": 9068,
+    "public_name": "SR_CO",
+    "top_level_sections": [
+      "System",
+      "Site",
+      "Mount",
+      "Inverters",
+      "Modules",
+      "Meters",
+      "Other Instruments",
+      "Metrics"
+    ]
+  },
+  "note": "File preserved exactly as retrieved. No other object was retrieved."
+}
